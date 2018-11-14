@@ -1,4 +1,4 @@
-ARM Linker, 5.03 [Build 76] [MDK-ARM Standard]
+Component: ARM Compiler 5.06 update 5 (build 528) Tool: armlink [4d35e2]
 
 ==============================================================================
 
@@ -206,7 +206,7 @@ Section Cross References
     bsp_ds18b20.o(i.Check_Search_follow_function) refers to bsp_ds18b20.o(i.DQ_SearchROM_Read_Scratchpad) for DQ_SearchROM_Read_Scratchpad
     bsp_ds18b20.o(i.Check_Search_follow_function) refers to printfa.o(i.__0printf) for __2printf
     bsp_ds18b20.o(i.Check_Search_follow_function) refers to main.o(.bss) for ID_Buff
-    bsp_ds18b20.o(i.Check_Search_follow_function) refers to bsp_ds18b20.o(.constdata) for .constdata
+    bsp_ds18b20.o(i.Check_Search_follow_function) refers to bsp_ds18b20.o(.conststring) for .conststring
     bsp_ds18b20.o(i.Check_Temperature_Code) refers to bsp_ds18b20.o(i.DQ_Write_Scratchpad) for DQ_Write_Scratchpad
     bsp_ds18b20.o(i.Check_Temperature_Code) refers to bsp_ds18b20.o(i.DUT_DQ_OUT_Get_Temp) for DUT_DQ_OUT_Get_Temp
     bsp_ds18b20.o(i.Check_Temperature_Code) refers to f2d.o(.text) for __aeabi_f2d
@@ -1166,10 +1166,10 @@ Removing Unused input sections from the image.
     Removing stm32f10x_can.o(i.CAN_Transmit), (294 bytes).
     Removing stm32f10x_can.o(i.CAN_TransmitStatus), (160 bytes).
     Removing stm32f10x_can.o(i.CAN_WakeUp), (48 bytes).
-    Removing stm32f10x_can.o(i.CheckITStatus), (16 bytes).
+    Removing stm32f10x_can.o(i.CheckITStatus), (18 bytes).
     Removing stm32f10x_cec.o(i.CEC_ClearFlag), (36 bytes).
     Removing stm32f10x_cec.o(i.CEC_ClearITPendingBit), (36 bytes).
-    Removing stm32f10x_cec.o(i.CEC_Cmd), (28 bytes).
+    Removing stm32f10x_cec.o(i.CEC_Cmd), (32 bytes).
     Removing stm32f10x_cec.o(i.CEC_DeInit), (22 bytes).
     Removing stm32f10x_cec.o(i.CEC_EndOfMessageCmd), (12 bytes).
     Removing stm32f10x_cec.o(i.CEC_GetFlagStatus), (48 bytes).
@@ -1249,24 +1249,24 @@ Removing Unused input sections from the image.
     Removing stm32f10x_flash.o(i.FLASH_UserOptionByteConfig), (104 bytes).
     Removing stm32f10x_flash.o(i.FLASH_WaitForLastBank1Operation), (38 bytes).
     Removing stm32f10x_flash.o(i.FLASH_WaitForLastOperation), (38 bytes).
-    Removing stm32f10x_fsmc.o(i.FSMC_ClearFlag), (72 bytes).
+    Removing stm32f10x_fsmc.o(i.FSMC_ClearFlag), (64 bytes).
     Removing stm32f10x_fsmc.o(i.FSMC_ClearITPendingBit), (72 bytes).
     Removing stm32f10x_fsmc.o(i.FSMC_GetECC), (28 bytes).
     Removing stm32f10x_fsmc.o(i.FSMC_GetFlagStatus), (56 bytes).
     Removing stm32f10x_fsmc.o(i.FSMC_GetITStatus), (68 bytes).
-    Removing stm32f10x_fsmc.o(i.FSMC_ITConfig), (136 bytes).
+    Removing stm32f10x_fsmc.o(i.FSMC_ITConfig), (128 bytes).
     Removing stm32f10x_fsmc.o(i.FSMC_NANDCmd), (92 bytes).
-    Removing stm32f10x_fsmc.o(i.FSMC_NANDDeInit), (72 bytes).
+    Removing stm32f10x_fsmc.o(i.FSMC_NANDDeInit), (68 bytes).
     Removing stm32f10x_fsmc.o(i.FSMC_NANDECCCmd), (92 bytes).
-    Removing stm32f10x_fsmc.o(i.FSMC_NANDInit), (140 bytes).
+    Removing stm32f10x_fsmc.o(i.FSMC_NANDInit), (136 bytes).
     Removing stm32f10x_fsmc.o(i.FSMC_NANDStructInit), (54 bytes).
     Removing stm32f10x_fsmc.o(i.FSMC_NORSRAMCmd), (52 bytes).
-    Removing stm32f10x_fsmc.o(i.FSMC_NORSRAMDeInit), (56 bytes).
-    Removing stm32f10x_fsmc.o(i.FSMC_NORSRAMInit), (224 bytes).
+    Removing stm32f10x_fsmc.o(i.FSMC_NORSRAMDeInit), (54 bytes).
+    Removing stm32f10x_fsmc.o(i.FSMC_NORSRAMInit), (230 bytes).
     Removing stm32f10x_fsmc.o(i.FSMC_NORSRAMStructInit), (114 bytes).
     Removing stm32f10x_fsmc.o(i.FSMC_PCCARDCmd), (48 bytes).
-    Removing stm32f10x_fsmc.o(i.FSMC_PCCARDDeInit), (48 bytes).
-    Removing stm32f10x_fsmc.o(i.FSMC_PCCARDInit), (136 bytes).
+    Removing stm32f10x_fsmc.o(i.FSMC_PCCARDDeInit), (40 bytes).
+    Removing stm32f10x_fsmc.o(i.FSMC_PCCARDInit), (132 bytes).
     Removing stm32f10x_fsmc.o(i.FSMC_PCCARDStructInit), (60 bytes).
     Removing stm32f10x_gpio.o(i.GPIO_AFIODeInit), (20 bytes).
     Removing stm32f10x_gpio.o(i.GPIO_DeInit), (200 bytes).
@@ -1367,7 +1367,7 @@ Removing Unused input sections from the image.
     Removing stm32f10x_rtc.o(i.RTC_SetCounter), (28 bytes).
     Removing stm32f10x_rtc.o(i.RTC_SetPrescaler), (32 bytes).
     Removing stm32f10x_rtc.o(i.RTC_WaitForLastTask), (20 bytes).
-    Removing stm32f10x_rtc.o(i.RTC_WaitForSynchro), (32 bytes).
+    Removing stm32f10x_rtc.o(i.RTC_WaitForSynchro), (36 bytes).
     Removing stm32f10x_sdio.o(i.SDIO_CEATAITCmd), (16 bytes).
     Removing stm32f10x_sdio.o(i.SDIO_ClearFlag), (12 bytes).
     Removing stm32f10x_sdio.o(i.SDIO_ClearITPendingBit), (12 bytes).
@@ -1541,7 +1541,7 @@ Removing Unused input sections from the image.
     Removing stm32f10x_wwdg.o(i.WWDG_SetCounter), (16 bytes).
     Removing stm32f10x_wwdg.o(i.WWDG_SetPrescaler), (24 bytes).
     Removing stm32f10x_wwdg.o(i.WWDG_SetWindowValue), (40 bytes).
-    Removing main.o(.data), (696 bytes).
+    Removing main.o(.data), (692 bytes).
     Removing stm32f10x_it.o(.bss), (610 bytes).
     Removing bsp_led.o(i.LED_Delay), (18 bytes).
     Removing bsp_led.o(i.LED_GPIO_Config), (56 bytes).
@@ -1579,7 +1579,7 @@ Removing Unused input sections from the image.
     Removing bsp_iic2.o(i.Return_7051_Tmp), (308 bytes).
     Removing bsp_iic2.o(.data), (3 bytes).
 
-490 unused section(s) (total 24601 bytes) removed from the image.
+490 unused section(s) (total 24575 bytes) removed from the image.
 
 ==============================================================================
 
@@ -1689,24 +1689,24 @@ Image Symbol Table
     .text                                    0x08000168   Section        0  memseta.o(.text)
     .text                                    0x0800018c   Section        0  fadd.o(.text)
     .text                                    0x0800023c   Section        0  fdiv.o(.text)
-    .text                                    0x080002bc   Section        0  dadd.o(.text)
-    .text                                    0x0800040a   Section        0  dmul.o(.text)
-    .text                                    0x080004ee   Section        0  ddiv.o(.text)
-    .text                                    0x080005cc   Section        0  dflti.o(.text)
-    .text                                    0x080005ee   Section        0  dfltui.o(.text)
-    .text                                    0x08000608   Section        0  f2d.o(.text)
-    .text                                    0x0800062e   Section        0  d2f.o(.text)
-    .text                                    0x08000668   Section       20  cfcmple.o(.text)
-    .text                                    0x0800067c   Section       20  cfrcmple.o(.text)
-    .text                                    0x08000690   Section        0  uidiv.o(.text)
-    .text                                    0x080006bc   Section        0  uldiv.o(.text)
-    .text                                    0x0800071e   Section        0  llshl.o(.text)
-    .text                                    0x0800073c   Section        0  llsshr.o(.text)
-    .text                                    0x08000760   Section        0  iusefp.o(.text)
-    .text                                    0x08000760   Section        0  fepilogue.o(.text)
-    .text                                    0x080007cc   Section        0  depilogue.o(.text)
-    .text                                    0x0800088a   Section        0  dfixul.o(.text)
-    .text                                    0x080008bc   Section       40  cdrcmple.o(.text)
+    .text                                    0x080002b8   Section        0  dadd.o(.text)
+    .text                                    0x08000406   Section        0  dmul.o(.text)
+    .text                                    0x080004ea   Section        0  ddiv.o(.text)
+    .text                                    0x080005c8   Section        0  dflti.o(.text)
+    .text                                    0x080005ea   Section        0  dfltui.o(.text)
+    .text                                    0x08000604   Section        0  f2d.o(.text)
+    .text                                    0x0800062a   Section        0  d2f.o(.text)
+    .text                                    0x08000664   Section       20  cfcmple.o(.text)
+    .text                                    0x08000678   Section       20  cfrcmple.o(.text)
+    .text                                    0x0800068c   Section        0  uidiv.o(.text)
+    .text                                    0x080006b8   Section        0  uldiv.o(.text)
+    .text                                    0x0800071a   Section        0  llshl.o(.text)
+    .text                                    0x08000738   Section        0  llsshr.o(.text)
+    .text                                    0x0800075c   Section        0  iusefp.o(.text)
+    .text                                    0x0800075c   Section        0  fepilogue.o(.text)
+    .text                                    0x080007ca   Section        0  depilogue.o(.text)
+    .text                                    0x08000884   Section        0  dfixul.o(.text)
+    .text                                    0x080008b4   Section       48  cdrcmple.o(.text)
     .text                                    0x080008e4   Section       36  init.o(.text)
     .text                                    0x08000908   Section        0  llushr.o(.text)
     i.BusFault_Handler                       0x08000928   Section        0  stm32f10x_it.o(i.BusFault_Handler)
@@ -1720,222 +1720,222 @@ Image Symbol Table
     i.Check_Match_ROM                        0x08001728   Section        0  bsp_ds18b20.o(i.Check_Match_ROM)
     i.Check_Search_ROM                       0x080019d4   Section        0  bsp_ds18b20.o(i.Check_Search_ROM)
     i.Check_Search_follow_function           0x08001ab0   Section        0  bsp_ds18b20.o(i.Check_Search_follow_function)
-    i.Check_Temperature_Code                 0x08001ba0   Section        0  bsp_ds18b20.o(i.Check_Temperature_Code)
-    i.Check_Temperature_Code_14bit           0x08001d30   Section        0  bsp_ds18b20.o(i.Check_Temperature_Code_14bit)
-    i.Check_rw_parameters                    0x08001edc   Section        0  bsp_ds18b20.o(i.Check_rw_parameters)
-    i.Check_rw_rom_code                      0x08002180   Section        0  bsp_ds18b20.o(i.Check_rw_rom_code)
-    i.Check_rw_scratchpad                    0x08002404   Section        0  bsp_ds18b20.o(i.Check_rw_scratchpad)
-    i.Check_rw_scratchpad_ext                0x080025c0   Section        0  bsp_ds18b20.o(i.Check_rw_scratchpad_ext)
-    i.Check_rw_user                          0x080027d0   Section        0  bsp_ds18b20.o(i.Check_rw_user)
-    i.Check_rw_user_ext                      0x08002968   Section        0  bsp_ds18b20.o(i.Check_rw_user_ext)
-    i.DQ_Alarm_SearchROM                     0x08002b2c   Section        0  bsp_ds18b20.o(i.DQ_Alarm_SearchROM)
-    i.DQ_Check_Power_Supply                  0x08002cb0   Section        0  bsp_ds18b20.o(i.DQ_Check_Power_Supply)
-    i.DQ_Copy_PAGE0                          0x08002d38   Section        0  bsp_ds18b20.o(i.DQ_Copy_PAGE0)
-    i.DQ_Copy_PAGE1                          0x08002d68   Section        0  bsp_ds18b20.o(i.DQ_Copy_PAGE1)
-    i.DQ_Presence                            0x08002d98   Section        0  bsp_ds18b20.o(i.DQ_Presence)
-    DQ_Presence                              0x08002d99   Thumb Code    42  bsp_ds18b20.o(i.DQ_Presence)
-    i.DQ_Read2Bit                            0x08002dc2   Section        0  bsp_ds18b20.o(i.DQ_Read2Bit)
-    i.DQ_Read_Bit                            0x08002dec   Section        0  bsp_ds18b20.o(i.DQ_Read_Bit)
-    DQ_Read_Bit                              0x08002ded   Thumb Code    42  bsp_ds18b20.o(i.DQ_Read_Bit)
-    i.DQ_Read_Byte                           0x08002e16   Section        0  bsp_ds18b20.o(i.DQ_Read_Byte)
-    i.DQ_Read_Parameters                     0x08002e40   Section        0  bsp_ds18b20.o(i.DQ_Read_Parameters)
-    i.DQ_Read_Rom_Code                       0x08002e78   Section        0  bsp_ds18b20.o(i.DQ_Read_Rom_Code)
-    i.DQ_Read_Scrpad                         0x08002eec   Section        0  bsp_ds18b20.o(i.DQ_Read_Scrpad)
-    i.DQ_Read_Scrpad_Ext                     0x08002fc4   Section        0  bsp_ds18b20.o(i.DQ_Read_Scrpad_Ext)
-    i.DQ_Read_Scrpad_Ext_match2              0x08002ffc   Section        0  bsp_ds18b20.o(i.DQ_Read_Scrpad_Ext_match2)
-    i.DQ_Read_Scrpad_match2                  0x0800304e   Section        0  bsp_ds18b20.o(i.DQ_Read_Scrpad_match2)
-    i.DQ_Read_User_Ext                       0x080030a0   Section        0  bsp_ds18b20.o(i.DQ_Read_User_Ext)
-    i.DQ_Read_User_Ext_match2                0x080030d8   Section        0  bsp_ds18b20.o(i.DQ_Read_User_Ext_match2)
-    i.DQ_Recall_EE                           0x0800312c   Section        0  bsp_ds18b20.o(i.DQ_Recall_EE)
-    i.DQ_Recall_PAGE0_RES                    0x08003158   Section        0  bsp_ds18b20.o(i.DQ_Recall_PAGE0_RES)
-    i.DQ_Recall_PAGE1                        0x08003184   Section        0  bsp_ds18b20.o(i.DQ_Recall_PAGE1)
-    i.DQ_Rst                                 0x080031ae   Section        0  bsp_ds18b20.o(i.DQ_Rst)
-    DQ_Rst                                   0x080031af   Thumb Code    46  bsp_ds18b20.o(i.DQ_Rst)
-    i.DQ_SearchROM                           0x080031dc   Section        0  bsp_ds18b20.o(i.DQ_SearchROM)
-    i.DQ_SearchROM_Read_Scratchpad           0x080033b4   Section        0  bsp_ds18b20.o(i.DQ_SearchROM_Read_Scratchpad)
-    i.DQ_SearchROM_Write_Scratchpad          0x08003568   Section        0  bsp_ds18b20.o(i.DQ_SearchROM_Write_Scratchpad)
-    i.DQ_Setup_ROM                           0x0800370c   Section        0  bsp_ds18b20.o(i.DQ_Setup_ROM)
-    i.DQ_Write_Bit                           0x0800377a   Section        0  bsp_ds18b20.o(i.DQ_Write_Bit)
-    i.DQ_Write_Byte                          0x080037b2   Section        0  bsp_ds18b20.o(i.DQ_Write_Byte)
-    i.DQ_Write_Parameters                    0x080037ea   Section        0  bsp_ds18b20.o(i.DQ_Write_Parameters)
-    i.DQ_Write_Parameters_3byte              0x08003860   Section        0  bsp_ds18b20.o(i.DQ_Write_Parameters_3byte)
-    i.DQ_Write_Scratchpad                    0x080038a4   Section        0  bsp_ds18b20.o(i.DQ_Write_Scratchpad)
-    i.DQ_Write_Scratchpad_Ext                0x080038e8   Section        0  bsp_ds18b20.o(i.DQ_Write_Scratchpad_Ext)
-    i.DQ_Write_Scratchpad_Ext_Match          0x08003940   Section        0  bsp_ds18b20.o(i.DQ_Write_Scratchpad_Ext_Match)
-    i.DQ_Write_Scratchpad_Match              0x080039b2   Section        0  bsp_ds18b20.o(i.DQ_Write_Scratchpad_Match)
-    i.DQ_Write_User                          0x08003a10   Section        0  bsp_ds18b20.o(i.DQ_Write_User)
-    i.DQ_Write_User_Ext                      0x08003a54   Section        0  bsp_ds18b20.o(i.DQ_Write_User_Ext)
-    i.DQ_Write_User_Ext_Match                0x08003aac   Section        0  bsp_ds18b20.o(i.DQ_Write_User_Ext_Match)
-    i.DQ_Write_User_Match                    0x08003b1e   Section        0  bsp_ds18b20.o(i.DQ_Write_User_Match)
-    i.DUT_DQ_OUT_GPIO_Config                 0x08003b7c   Section        0  bsp_ds18b20.o(i.DUT_DQ_OUT_GPIO_Config)
-    DUT_DQ_OUT_GPIO_Config                   0x08003b7d   Thumb Code    44  bsp_ds18b20.o(i.DUT_DQ_OUT_GPIO_Config)
-    i.DUT_DQ_OUT_Get_Temp                    0x08003bac   Section        0  bsp_ds18b20.o(i.DUT_DQ_OUT_Get_Temp)
-    i.DUT_DQ_OUT_Get_Temp_14bit              0x08003c54   Section        0  bsp_ds18b20.o(i.DUT_DQ_OUT_Get_Temp_14bit)
-    i.DUT_DQ_OUT_Mode_IPU                    0x08003d20   Section        0  bsp_ds18b20.o(i.DUT_DQ_OUT_Mode_IPU)
-    DUT_DQ_OUT_Mode_IPU                      0x08003d21   Thumb Code    24  bsp_ds18b20.o(i.DUT_DQ_OUT_Mode_IPU)
-    i.DUT_DQ_OUT_Mode_Out_PP                 0x08003d3c   Section        0  bsp_ds18b20.o(i.DUT_DQ_OUT_Mode_Out_PP)
-    DUT_DQ_OUT_Mode_Out_PP                   0x08003d3d   Thumb Code    28  bsp_ds18b20.o(i.DUT_DQ_OUT_Mode_Out_PP)
-    i.DUT_DQ_OUT_Presence                    0x08003d5c   Section        0  bsp_ds18b20.o(i.DUT_DQ_OUT_Presence)
-    DUT_DQ_OUT_Presence                      0x08003d5d   Thumb Code    22  bsp_ds18b20.o(i.DUT_DQ_OUT_Presence)
-    i.DUT_DQ_OUT_Read_Bit                    0x08003d74   Section        0  bsp_ds18b20.o(i.DUT_DQ_OUT_Read_Bit)
-    DUT_DQ_OUT_Read_Bit                      0x08003d75   Thumb Code    58  bsp_ds18b20.o(i.DUT_DQ_OUT_Read_Bit)
-    i.DUT_DQ_OUT_Read_Byte                   0x08003db4   Section        0  bsp_ds18b20.o(i.DUT_DQ_OUT_Read_Byte)
-    i.DUT_DQ_OUT_Rst                         0x08003dd8   Section        0  bsp_ds18b20.o(i.DUT_DQ_OUT_Rst)
-    DUT_DQ_OUT_Rst                           0x08003dd9   Thumb Code    64  bsp_ds18b20.o(i.DUT_DQ_OUT_Rst)
-    i.DUT_DQ_OUT_Write_Bit                   0x08003e38   Section        0  bsp_ds18b20.o(i.DUT_DQ_OUT_Write_Bit)
-    i.DUT_DQ_OUT_Write_Byte                  0x08003e88   Section        0  bsp_ds18b20.o(i.DUT_DQ_OUT_Write_Byte)
-    i.DebugMon_Handler                       0x08003ee8   Section        0  stm32f10x_it.o(i.DebugMon_Handler)
-    i.Delay_us                               0x08003eec   Section        0  bsp_systick.o(i.Delay_us)
-    i.GPIO_Config                            0x08003f14   Section        0  bsp_ds18b20.o(i.GPIO_Config)
-    i.GPIO_Init                              0x08003f8c   Section        0  stm32f10x_gpio.o(i.GPIO_Init)
-    i.GPIO_ReadInputDataBit                  0x0800409e   Section        0  stm32f10x_gpio.o(i.GPIO_ReadInputDataBit)
-    i.GPIO_ResetBits                         0x080040b0   Section        0  stm32f10x_gpio.o(i.GPIO_ResetBits)
-    i.GPIO_SetBits                           0x080040b4   Section        0  stm32f10x_gpio.o(i.GPIO_SetBits)
-    i.HardFault_Handler                      0x080040b8   Section        0  stm32f10x_it.o(i.HardFault_Handler)
-    i.I2C1_Init                              0x080040cc   Section        0  bsp_iic2.o(i.I2C1_Init)
-    i.I2C2_Init                              0x08004150   Section        0  bsp_iic2.o(i.I2C2_Init)
-    i.I2C_AcknowledgeConfig                  0x080041d4   Section        0  stm32f10x_i2c.o(i.I2C_AcknowledgeConfig)
-    i.I2C_Cmd                                0x080041ec   Section        0  stm32f10x_i2c.o(i.I2C_Cmd)
-    i.I2C_DeInit                             0x08004204   Section        0  stm32f10x_i2c.o(i.I2C_DeInit)
-    i.I2C_Init                               0x0800423c   Section        0  stm32f10x_i2c.o(i.I2C_Init)
-    i.MUX_18B20_OUT_GPIO_Config              0x08004328   Section        0  bsp_ds18b20.o(i.MUX_18B20_OUT_GPIO_Config)
-    MUX_18B20_OUT_GPIO_Config                0x08004329   Thumb Code    46  bsp_ds18b20.o(i.MUX_18B20_OUT_GPIO_Config)
-    i.MUX_18B20_OUT_Mode_IPU                 0x0800435c   Section        0  bsp_ds18b20.o(i.MUX_18B20_OUT_Mode_IPU)
-    MUX_18B20_OUT_Mode_IPU                   0x0800435d   Thumb Code    24  bsp_ds18b20.o(i.MUX_18B20_OUT_Mode_IPU)
-    i.MUX_18B20_OUT_Mode_Out_PP              0x08004378   Section        0  bsp_ds18b20.o(i.MUX_18B20_OUT_Mode_Out_PP)
-    MUX_18B20_OUT_Mode_Out_PP                0x08004379   Thumb Code    30  bsp_ds18b20.o(i.MUX_18B20_OUT_Mode_Out_PP)
-    i.MUX_18B20_OUT_Presence                 0x0800439c   Section        0  bsp_ds18b20.o(i.MUX_18B20_OUT_Presence)
-    MUX_18B20_OUT_Presence                   0x0800439d   Thumb Code    82  bsp_ds18b20.o(i.MUX_18B20_OUT_Presence)
-    i.MUX_18B20_OUT_Read_Bit                 0x080043f4   Section        0  bsp_ds18b20.o(i.MUX_18B20_OUT_Read_Bit)
-    MUX_18B20_OUT_Read_Bit                   0x080043f5   Thumb Code    86  bsp_ds18b20.o(i.MUX_18B20_OUT_Read_Bit)
-    i.MUX_18B20_OUT_Rst                      0x08004450   Section        0  bsp_ds18b20.o(i.MUX_18B20_OUT_Rst)
-    MUX_18B20_OUT_Rst                        0x08004451   Thumb Code    38  bsp_ds18b20.o(i.MUX_18B20_OUT_Rst)
-    i.MUX_18B20_OUT_Write_Bit                0x0800447c   Section        0  bsp_ds18b20.o(i.MUX_18B20_OUT_Write_Bit)
-    i.MUX_18B20_OUT_Write_Byte               0x080044d0   Section        0  bsp_ds18b20.o(i.MUX_18B20_OUT_Write_Byte)
-    i.MUX_E1_GPIO_Config                     0x08004530   Section        0  bsp_ds18b20.o(i.MUX_E1_GPIO_Config)
-    MUX_E1_GPIO_Config                       0x08004531   Thumb Code    46  bsp_ds18b20.o(i.MUX_E1_GPIO_Config)
-    i.MUX_E2_GPIO_Config                     0x08004564   Section        0  bsp_ds18b20.o(i.MUX_E2_GPIO_Config)
-    MUX_E2_GPIO_Config                       0x08004565   Thumb Code    46  bsp_ds18b20.o(i.MUX_E2_GPIO_Config)
-    i.MUX_E3_GPIO_Config                     0x08004598   Section        0  bsp_ds18b20.o(i.MUX_E3_GPIO_Config)
-    MUX_E3_GPIO_Config                       0x08004599   Thumb Code    44  bsp_ds18b20.o(i.MUX_E3_GPIO_Config)
-    i.MUX_E4_GPIO_Config                     0x080045c8   Section        0  bsp_ds18b20.o(i.MUX_E4_GPIO_Config)
-    MUX_E4_GPIO_Config                       0x080045c9   Thumb Code    46  bsp_ds18b20.o(i.MUX_E4_GPIO_Config)
-    i.MUX_E5_GPIO_Config                     0x080045fc   Section        0  bsp_ds18b20.o(i.MUX_E5_GPIO_Config)
-    MUX_E5_GPIO_Config                       0x080045fd   Thumb Code    46  bsp_ds18b20.o(i.MUX_E5_GPIO_Config)
-    i.MUX_S0_GPIO_Config                     0x08004630   Section        0  bsp_ds18b20.o(i.MUX_S0_GPIO_Config)
-    MUX_S0_GPIO_Config                       0x08004631   Thumb Code    50  bsp_ds18b20.o(i.MUX_S0_GPIO_Config)
-    i.MUX_S1_GPIO_Config                     0x08004668   Section        0  bsp_ds18b20.o(i.MUX_S1_GPIO_Config)
-    MUX_S1_GPIO_Config                       0x08004669   Thumb Code    50  bsp_ds18b20.o(i.MUX_S1_GPIO_Config)
-    i.MUX_S2_GPIO_Config                     0x080046a0   Section        0  bsp_ds18b20.o(i.MUX_S2_GPIO_Config)
-    MUX_S2_GPIO_Config                       0x080046a1   Thumb Code    50  bsp_ds18b20.o(i.MUX_S2_GPIO_Config)
-    i.MUX_S3_GPIO_Config                     0x080046d8   Section        0  bsp_ds18b20.o(i.MUX_S3_GPIO_Config)
-    MUX_S3_GPIO_Config                       0x080046d9   Thumb Code    50  bsp_ds18b20.o(i.MUX_S3_GPIO_Config)
-    i.MemManage_Handler                      0x08004710   Section        0  stm32f10x_it.o(i.MemManage_Handler)
-    i.NMI_Handler                            0x08004714   Section        0  stm32f10x_it.o(i.NMI_Handler)
-    i.NVIC_Configuration                     0x08004716   Section        0  main.o(i.NVIC_Configuration)
-    i.NVIC_Init                              0x08004740   Section        0  misc.o(i.NVIC_Init)
-    i.NVIC_PriorityGroupConfig               0x080047b4   Section        0  misc.o(i.NVIC_PriorityGroupConfig)
-    i.PendSV_Handler                         0x080047c8   Section        0  stm32f10x_it.o(i.PendSV_Handler)
-    i.RCC_APB1PeriphClockCmd                 0x080047cc   Section        0  stm32f10x_rcc.o(i.RCC_APB1PeriphClockCmd)
-    i.RCC_APB1PeriphResetCmd                 0x080047ec   Section        0  stm32f10x_rcc.o(i.RCC_APB1PeriphResetCmd)
-    i.RCC_APB2PeriphClockCmd                 0x0800480c   Section        0  stm32f10x_rcc.o(i.RCC_APB2PeriphClockCmd)
-    i.RCC_GetClocksFreq                      0x0800482c   Section        0  stm32f10x_rcc.o(i.RCC_GetClocksFreq)
-    i.STRONG_PULLUP_GPIO_Config              0x08004900   Section        0  bsp_ds18b20.o(i.STRONG_PULLUP_GPIO_Config)
-    STRONG_PULLUP_GPIO_Config                0x08004901   Thumb Code    46  bsp_ds18b20.o(i.STRONG_PULLUP_GPIO_Config)
-    i.SVC_Handler                            0x08004934   Section        0  stm32f10x_it.o(i.SVC_Handler)
-    i.SetSysClock                            0x08004936   Section        0  system_stm32f10x.o(i.SetSysClock)
-    SetSysClock                              0x08004937   Thumb Code     8  system_stm32f10x.o(i.SetSysClock)
-    i.SetSysClockTo72                        0x08004940   Section        0  system_stm32f10x.o(i.SetSysClockTo72)
-    SetSysClockTo72                          0x08004941   Thumb Code   212  system_stm32f10x.o(i.SetSysClockTo72)
-    i.SysTick_Handler                        0x08004a1c   Section        0  stm32f10x_it.o(i.SysTick_Handler)
-    i.SysTick_Init                           0x08004a24   Section        0  bsp_systick.o(i.SysTick_Init)
-    i.SystemInit                             0x08004aa0   Section        0  system_stm32f10x.o(i.SystemInit)
-    i.TEST_ADDR0_GPIO_Config                 0x08004b00   Section        0  bsp_ds18b20.o(i.TEST_ADDR0_GPIO_Config)
-    TEST_ADDR0_GPIO_Config                   0x08004b01   Thumb Code    50  bsp_ds18b20.o(i.TEST_ADDR0_GPIO_Config)
-    i.TEST_ADDR1_GPIO_Config                 0x08004b38   Section        0  bsp_ds18b20.o(i.TEST_ADDR1_GPIO_Config)
-    TEST_ADDR1_GPIO_Config                   0x08004b39   Thumb Code    50  bsp_ds18b20.o(i.TEST_ADDR1_GPIO_Config)
-    i.TEST_ADDR2_GPIO_Config                 0x08004b70   Section        0  bsp_ds18b20.o(i.TEST_ADDR2_GPIO_Config)
-    TEST_ADDR2_GPIO_Config                   0x08004b71   Thumb Code    50  bsp_ds18b20.o(i.TEST_ADDR2_GPIO_Config)
-    i.TEST_ADDR3_GPIO_Config                 0x08004ba8   Section        0  bsp_ds18b20.o(i.TEST_ADDR3_GPIO_Config)
-    TEST_ADDR3_GPIO_Config                   0x08004ba9   Thumb Code    50  bsp_ds18b20.o(i.TEST_ADDR3_GPIO_Config)
-    i.TEST_ADDR4_GPIO_Config                 0x08004be0   Section        0  bsp_ds18b20.o(i.TEST_ADDR4_GPIO_Config)
-    TEST_ADDR4_GPIO_Config                   0x08004be1   Thumb Code    50  bsp_ds18b20.o(i.TEST_ADDR4_GPIO_Config)
-    i.TEST_ADDR5_GPIO_Config                 0x08004c18   Section        0  bsp_ds18b20.o(i.TEST_ADDR5_GPIO_Config)
-    TEST_ADDR5_GPIO_Config                   0x08004c19   Thumb Code    46  bsp_ds18b20.o(i.TEST_ADDR5_GPIO_Config)
-    i.TEST_ADDR6_GPIO_Config                 0x08004c4c   Section        0  bsp_ds18b20.o(i.TEST_ADDR6_GPIO_Config)
-    TEST_ADDR6_GPIO_Config                   0x08004c4d   Thumb Code    46  bsp_ds18b20.o(i.TEST_ADDR6_GPIO_Config)
-    i.TEST_ADDR7_GPIO_Config                 0x08004c80   Section        0  bsp_ds18b20.o(i.TEST_ADDR7_GPIO_Config)
-    TEST_ADDR7_GPIO_Config                   0x08004c81   Thumb Code    46  bsp_ds18b20.o(i.TEST_ADDR7_GPIO_Config)
-    i.TEST_DATA0_GPIO_Config                 0x08004cb4   Section        0  bsp_ds18b20.o(i.TEST_DATA0_GPIO_Config)
-    TEST_DATA0_GPIO_Config                   0x08004cb5   Thumb Code    38  bsp_ds18b20.o(i.TEST_DATA0_GPIO_Config)
-    i.TEST_DATA1_GPIO_Config                 0x08004ce0   Section        0  bsp_ds18b20.o(i.TEST_DATA1_GPIO_Config)
-    TEST_DATA1_GPIO_Config                   0x08004ce1   Thumb Code    38  bsp_ds18b20.o(i.TEST_DATA1_GPIO_Config)
-    i.TEST_DATA2_GPIO_Config                 0x08004d0c   Section        0  bsp_ds18b20.o(i.TEST_DATA2_GPIO_Config)
-    TEST_DATA2_GPIO_Config                   0x08004d0d   Thumb Code    38  bsp_ds18b20.o(i.TEST_DATA2_GPIO_Config)
-    i.TEST_DATA3_GPIO_Config                 0x08004d38   Section        0  bsp_ds18b20.o(i.TEST_DATA3_GPIO_Config)
-    TEST_DATA3_GPIO_Config                   0x08004d39   Thumb Code    36  bsp_ds18b20.o(i.TEST_DATA3_GPIO_Config)
-    i.TEST_DATA4_GPIO_Config                 0x08004d60   Section        0  bsp_ds18b20.o(i.TEST_DATA4_GPIO_Config)
-    TEST_DATA4_GPIO_Config                   0x08004d61   Thumb Code    40  bsp_ds18b20.o(i.TEST_DATA4_GPIO_Config)
-    i.TEST_DATA5_GPIO_Config                 0x08004d8c   Section        0  bsp_ds18b20.o(i.TEST_DATA5_GPIO_Config)
-    TEST_DATA5_GPIO_Config                   0x08004d8d   Thumb Code    40  bsp_ds18b20.o(i.TEST_DATA5_GPIO_Config)
-    i.TEST_DATA6_GPIO_Config                 0x08004db8   Section        0  bsp_ds18b20.o(i.TEST_DATA6_GPIO_Config)
-    TEST_DATA6_GPIO_Config                   0x08004db9   Thumb Code    40  bsp_ds18b20.o(i.TEST_DATA6_GPIO_Config)
-    i.TEST_DATA7_GPIO_Config                 0x08004de4   Section        0  bsp_ds18b20.o(i.TEST_DATA7_GPIO_Config)
-    TEST_DATA7_GPIO_Config                   0x08004de5   Thumb Code    40  bsp_ds18b20.o(i.TEST_DATA7_GPIO_Config)
-    i.TOTAL_DQ_OUT_GPIO_Config               0x08004e10   Section        0  bsp_ds18b20.o(i.TOTAL_DQ_OUT_GPIO_Config)
-    TOTAL_DQ_OUT_GPIO_Config                 0x08004e11   Thumb Code    46  bsp_ds18b20.o(i.TOTAL_DQ_OUT_GPIO_Config)
-    i.TOTAL_DQ_OUT_Mode_IPU                  0x08004e44   Section        0  bsp_ds18b20.o(i.TOTAL_DQ_OUT_Mode_IPU)
-    TOTAL_DQ_OUT_Mode_IPU                    0x08004e45   Thumb Code    24  bsp_ds18b20.o(i.TOTAL_DQ_OUT_Mode_IPU)
-    i.TOTAL_DQ_OUT_Mode_Out_PP               0x08004e60   Section        0  bsp_ds18b20.o(i.TOTAL_DQ_OUT_Mode_Out_PP)
-    TOTAL_DQ_OUT_Mode_Out_PP                 0x08004e61   Thumb Code    30  bsp_ds18b20.o(i.TOTAL_DQ_OUT_Mode_Out_PP)
-    i.TOTAL_DQ_OUT_Presence                  0x08004e84   Section        0  bsp_ds18b20.o(i.TOTAL_DQ_OUT_Presence)
-    TOTAL_DQ_OUT_Presence                    0x08004e85   Thumb Code   100  bsp_ds18b20.o(i.TOTAL_DQ_OUT_Presence)
-    i.TOTAL_DQ_OUT_Read_Bit                  0x08004ef4   Section        0  bsp_ds18b20.o(i.TOTAL_DQ_OUT_Read_Bit)
-    TOTAL_DQ_OUT_Read_Bit                    0x08004ef5   Thumb Code    78  bsp_ds18b20.o(i.TOTAL_DQ_OUT_Read_Bit)
-    i.TOTAL_DQ_OUT_Rst                       0x08004f48   Section        0  bsp_ds18b20.o(i.TOTAL_DQ_OUT_Rst)
-    TOTAL_DQ_OUT_Rst                         0x08004f49   Thumb Code    84  bsp_ds18b20.o(i.TOTAL_DQ_OUT_Rst)
-    i.TOTAL_DQ_OUT_Write_Bit                 0x08004fa0   Section        0  bsp_ds18b20.o(i.TOTAL_DQ_OUT_Write_Bit)
-    i.TOTAL_DQ_OUT_Write_Byte                0x0800500c   Section        0  bsp_ds18b20.o(i.TOTAL_DQ_OUT_Write_Byte)
-    i.TimingDelay_Decrement                  0x08005088   Section        0  bsp_systick.o(i.TimingDelay_Decrement)
-    i.USART1_Config                          0x080050a0   Section        0  bsp_usart1.o(i.USART1_Config)
-    i.USART1_IRQHandler                      0x0800513c   Section        0  stm32f10x_it.o(i.USART1_IRQHandler)
-    i.USART_ClearITPendingBit                0x08005290   Section        0  stm32f10x_usart.o(i.USART_ClearITPendingBit)
-    i.USART_Cmd                              0x080052ae   Section        0  stm32f10x_usart.o(i.USART_Cmd)
-    i.USART_GetFlagStatus                    0x080052c6   Section        0  stm32f10x_usart.o(i.USART_GetFlagStatus)
-    i.USART_GetITStatus                      0x080052e0   Section        0  stm32f10x_usart.o(i.USART_GetITStatus)
-    i.USART_ITConfig                         0x08005334   Section        0  stm32f10x_usart.o(i.USART_ITConfig)
-    i.USART_Init                             0x08005380   Section        0  stm32f10x_usart.o(i.USART_Init)
-    i.USART_ReceiveData                      0x08005458   Section        0  stm32f10x_usart.o(i.USART_ReceiveData)
-    i.USART_SendData                         0x08005462   Section        0  stm32f10x_usart.o(i.USART_SendData)
-    i.UsageFault_Handler                     0x0800546a   Section        0  stm32f10x_it.o(i.UsageFault_Handler)
-    i.__0printf                              0x08005470   Section        0  printfa.o(i.__0printf)
-    i.__scatterload_copy                     0x08005490   Section       14  handlers.o(i.__scatterload_copy)
-    i.__scatterload_null                     0x0800549e   Section        2  handlers.o(i.__scatterload_null)
-    i.__scatterload_zeroinit                 0x080054a0   Section       14  handlers.o(i.__scatterload_zeroinit)
-    i._fp_digits                             0x080054b0   Section        0  printfa.o(i._fp_digits)
-    _fp_digits                               0x080054b1   Thumb Code   326  printfa.o(i._fp_digits)
-    i._printf_core                           0x0800560c   Section        0  printfa.o(i._printf_core)
-    _printf_core                             0x0800560d   Thumb Code  1762  printfa.o(i._printf_core)
-    i._printf_post_padding                   0x08005cfc   Section        0  printfa.o(i._printf_post_padding)
-    _printf_post_padding                     0x08005cfd   Thumb Code    38  printfa.o(i._printf_post_padding)
-    i._printf_pre_padding                    0x08005d22   Section        0  printfa.o(i._printf_pre_padding)
-    _printf_pre_padding                      0x08005d23   Thumb Code    48  printfa.o(i._printf_pre_padding)
-    i.adc_dr_256                             0x08005d52   Section        0  bsp_ds18b20.o(i.adc_dr_256)
-    i.adc_dr_512                             0x08005d74   Section        0  bsp_ds18b20.o(i.adc_dr_512)
-    i.check_coeff_boundary                   0x08005d98   Section        0  bsp_ds18b20.o(i.check_coeff_boundary)
-    i.close_adc_avg                          0x08005f90   Section        0  bsp_ds18b20.o(i.close_adc_avg)
-    i.close_adc_delay                        0x08005fb2   Section        0  bsp_ds18b20.o(i.close_adc_delay)
-    i.close_powerdn                          0x08005fd4   Section        0  bsp_ds18b20.o(i.close_powerdn)
-    i.close_pulldown_powerdn                 0x08005ff6   Section        0  bsp_ds18b20.o(i.close_pulldown_powerdn)
-    i.fputc                                  0x08006018   Section        0  bsp_usart1.o(i.fputc)
-    i.main                                   0x0800604c   Section        0  main.o(i.main)
-    i.open_adc_avg                           0x0800693c   Section        0  bsp_ds18b20.o(i.open_adc_avg)
-    i.open_adc_delay                         0x0800695e   Section        0  bsp_ds18b20.o(i.open_adc_delay)
-    i.open_powerdn                           0x08006980   Section        0  bsp_ds18b20.o(i.open_powerdn)
-    i.open_pulldown_powerdn                  0x080069a2   Section        0  bsp_ds18b20.o(i.open_pulldown_powerdn)
-    i.search_device_on_bus                   0x080069c4   Section        0  bsp_ds18b20.o(i.search_device_on_bus)
-    i.show_system_parameters                 0x080069fc   Section        0  bsp_ds18b20.o(i.show_system_parameters)
-    .constdata                               0x08006ae8   Section      134  bsp_ds18b20.o(.constdata)
+    i.Check_Temperature_Code                 0x08001ba4   Section        0  bsp_ds18b20.o(i.Check_Temperature_Code)
+    i.Check_Temperature_Code_14bit           0x08001d34   Section        0  bsp_ds18b20.o(i.Check_Temperature_Code_14bit)
+    i.Check_rw_parameters                    0x08001ee0   Section        0  bsp_ds18b20.o(i.Check_rw_parameters)
+    i.Check_rw_rom_code                      0x08002184   Section        0  bsp_ds18b20.o(i.Check_rw_rom_code)
+    i.Check_rw_scratchpad                    0x08002408   Section        0  bsp_ds18b20.o(i.Check_rw_scratchpad)
+    i.Check_rw_scratchpad_ext                0x080025c4   Section        0  bsp_ds18b20.o(i.Check_rw_scratchpad_ext)
+    i.Check_rw_user                          0x080027d4   Section        0  bsp_ds18b20.o(i.Check_rw_user)
+    i.Check_rw_user_ext                      0x0800296c   Section        0  bsp_ds18b20.o(i.Check_rw_user_ext)
+    i.DQ_Alarm_SearchROM                     0x08002b30   Section        0  bsp_ds18b20.o(i.DQ_Alarm_SearchROM)
+    i.DQ_Check_Power_Supply                  0x08002cb4   Section        0  bsp_ds18b20.o(i.DQ_Check_Power_Supply)
+    i.DQ_Copy_PAGE0                          0x08002d3c   Section        0  bsp_ds18b20.o(i.DQ_Copy_PAGE0)
+    i.DQ_Copy_PAGE1                          0x08002d6c   Section        0  bsp_ds18b20.o(i.DQ_Copy_PAGE1)
+    i.DQ_Presence                            0x08002d9c   Section        0  bsp_ds18b20.o(i.DQ_Presence)
+    DQ_Presence                              0x08002d9d   Thumb Code    42  bsp_ds18b20.o(i.DQ_Presence)
+    i.DQ_Read2Bit                            0x08002dc6   Section        0  bsp_ds18b20.o(i.DQ_Read2Bit)
+    i.DQ_Read_Bit                            0x08002df0   Section        0  bsp_ds18b20.o(i.DQ_Read_Bit)
+    DQ_Read_Bit                              0x08002df1   Thumb Code    42  bsp_ds18b20.o(i.DQ_Read_Bit)
+    i.DQ_Read_Byte                           0x08002e1a   Section        0  bsp_ds18b20.o(i.DQ_Read_Byte)
+    i.DQ_Read_Parameters                     0x08002e44   Section        0  bsp_ds18b20.o(i.DQ_Read_Parameters)
+    i.DQ_Read_Rom_Code                       0x08002e7c   Section        0  bsp_ds18b20.o(i.DQ_Read_Rom_Code)
+    i.DQ_Read_Scrpad                         0x08002ef0   Section        0  bsp_ds18b20.o(i.DQ_Read_Scrpad)
+    i.DQ_Read_Scrpad_Ext                     0x08002fc8   Section        0  bsp_ds18b20.o(i.DQ_Read_Scrpad_Ext)
+    i.DQ_Read_Scrpad_Ext_match2              0x08003000   Section        0  bsp_ds18b20.o(i.DQ_Read_Scrpad_Ext_match2)
+    i.DQ_Read_Scrpad_match2                  0x08003052   Section        0  bsp_ds18b20.o(i.DQ_Read_Scrpad_match2)
+    i.DQ_Read_User_Ext                       0x080030a4   Section        0  bsp_ds18b20.o(i.DQ_Read_User_Ext)
+    i.DQ_Read_User_Ext_match2                0x080030dc   Section        0  bsp_ds18b20.o(i.DQ_Read_User_Ext_match2)
+    i.DQ_Recall_EE                           0x08003130   Section        0  bsp_ds18b20.o(i.DQ_Recall_EE)
+    i.DQ_Recall_PAGE0_RES                    0x0800315c   Section        0  bsp_ds18b20.o(i.DQ_Recall_PAGE0_RES)
+    i.DQ_Recall_PAGE1                        0x08003188   Section        0  bsp_ds18b20.o(i.DQ_Recall_PAGE1)
+    i.DQ_Rst                                 0x080031b2   Section        0  bsp_ds18b20.o(i.DQ_Rst)
+    DQ_Rst                                   0x080031b3   Thumb Code    46  bsp_ds18b20.o(i.DQ_Rst)
+    i.DQ_SearchROM                           0x080031e0   Section        0  bsp_ds18b20.o(i.DQ_SearchROM)
+    i.DQ_SearchROM_Read_Scratchpad           0x080033b8   Section        0  bsp_ds18b20.o(i.DQ_SearchROM_Read_Scratchpad)
+    i.DQ_SearchROM_Write_Scratchpad          0x0800356c   Section        0  bsp_ds18b20.o(i.DQ_SearchROM_Write_Scratchpad)
+    i.DQ_Setup_ROM                           0x08003710   Section        0  bsp_ds18b20.o(i.DQ_Setup_ROM)
+    i.DQ_Write_Bit                           0x0800377e   Section        0  bsp_ds18b20.o(i.DQ_Write_Bit)
+    i.DQ_Write_Byte                          0x080037b6   Section        0  bsp_ds18b20.o(i.DQ_Write_Byte)
+    i.DQ_Write_Parameters                    0x080037ee   Section        0  bsp_ds18b20.o(i.DQ_Write_Parameters)
+    i.DQ_Write_Parameters_3byte              0x08003864   Section        0  bsp_ds18b20.o(i.DQ_Write_Parameters_3byte)
+    i.DQ_Write_Scratchpad                    0x080038a8   Section        0  bsp_ds18b20.o(i.DQ_Write_Scratchpad)
+    i.DQ_Write_Scratchpad_Ext                0x080038ec   Section        0  bsp_ds18b20.o(i.DQ_Write_Scratchpad_Ext)
+    i.DQ_Write_Scratchpad_Ext_Match          0x08003944   Section        0  bsp_ds18b20.o(i.DQ_Write_Scratchpad_Ext_Match)
+    i.DQ_Write_Scratchpad_Match              0x080039b6   Section        0  bsp_ds18b20.o(i.DQ_Write_Scratchpad_Match)
+    i.DQ_Write_User                          0x08003a14   Section        0  bsp_ds18b20.o(i.DQ_Write_User)
+    i.DQ_Write_User_Ext                      0x08003a58   Section        0  bsp_ds18b20.o(i.DQ_Write_User_Ext)
+    i.DQ_Write_User_Ext_Match                0x08003ab0   Section        0  bsp_ds18b20.o(i.DQ_Write_User_Ext_Match)
+    i.DQ_Write_User_Match                    0x08003b22   Section        0  bsp_ds18b20.o(i.DQ_Write_User_Match)
+    i.DUT_DQ_OUT_GPIO_Config                 0x08003b80   Section        0  bsp_ds18b20.o(i.DUT_DQ_OUT_GPIO_Config)
+    DUT_DQ_OUT_GPIO_Config                   0x08003b81   Thumb Code    44  bsp_ds18b20.o(i.DUT_DQ_OUT_GPIO_Config)
+    i.DUT_DQ_OUT_Get_Temp                    0x08003bb0   Section        0  bsp_ds18b20.o(i.DUT_DQ_OUT_Get_Temp)
+    i.DUT_DQ_OUT_Get_Temp_14bit              0x08003c58   Section        0  bsp_ds18b20.o(i.DUT_DQ_OUT_Get_Temp_14bit)
+    i.DUT_DQ_OUT_Mode_IPU                    0x08003d24   Section        0  bsp_ds18b20.o(i.DUT_DQ_OUT_Mode_IPU)
+    DUT_DQ_OUT_Mode_IPU                      0x08003d25   Thumb Code    24  bsp_ds18b20.o(i.DUT_DQ_OUT_Mode_IPU)
+    i.DUT_DQ_OUT_Mode_Out_PP                 0x08003d40   Section        0  bsp_ds18b20.o(i.DUT_DQ_OUT_Mode_Out_PP)
+    DUT_DQ_OUT_Mode_Out_PP                   0x08003d41   Thumb Code    28  bsp_ds18b20.o(i.DUT_DQ_OUT_Mode_Out_PP)
+    i.DUT_DQ_OUT_Presence                    0x08003d60   Section        0  bsp_ds18b20.o(i.DUT_DQ_OUT_Presence)
+    DUT_DQ_OUT_Presence                      0x08003d61   Thumb Code    22  bsp_ds18b20.o(i.DUT_DQ_OUT_Presence)
+    i.DUT_DQ_OUT_Read_Bit                    0x08003d78   Section        0  bsp_ds18b20.o(i.DUT_DQ_OUT_Read_Bit)
+    DUT_DQ_OUT_Read_Bit                      0x08003d79   Thumb Code    58  bsp_ds18b20.o(i.DUT_DQ_OUT_Read_Bit)
+    i.DUT_DQ_OUT_Read_Byte                   0x08003db8   Section        0  bsp_ds18b20.o(i.DUT_DQ_OUT_Read_Byte)
+    i.DUT_DQ_OUT_Rst                         0x08003ddc   Section        0  bsp_ds18b20.o(i.DUT_DQ_OUT_Rst)
+    DUT_DQ_OUT_Rst                           0x08003ddd   Thumb Code    64  bsp_ds18b20.o(i.DUT_DQ_OUT_Rst)
+    i.DUT_DQ_OUT_Write_Bit                   0x08003e3c   Section        0  bsp_ds18b20.o(i.DUT_DQ_OUT_Write_Bit)
+    i.DUT_DQ_OUT_Write_Byte                  0x08003e8c   Section        0  bsp_ds18b20.o(i.DUT_DQ_OUT_Write_Byte)
+    i.DebugMon_Handler                       0x08003eec   Section        0  stm32f10x_it.o(i.DebugMon_Handler)
+    i.Delay_us                               0x08003ef0   Section        0  bsp_systick.o(i.Delay_us)
+    i.GPIO_Config                            0x08003f18   Section        0  bsp_ds18b20.o(i.GPIO_Config)
+    i.GPIO_Init                              0x08003f90   Section        0  stm32f10x_gpio.o(i.GPIO_Init)
+    i.GPIO_ReadInputDataBit                  0x080040a6   Section        0  stm32f10x_gpio.o(i.GPIO_ReadInputDataBit)
+    i.GPIO_ResetBits                         0x080040b8   Section        0  stm32f10x_gpio.o(i.GPIO_ResetBits)
+    i.GPIO_SetBits                           0x080040bc   Section        0  stm32f10x_gpio.o(i.GPIO_SetBits)
+    i.HardFault_Handler                      0x080040c0   Section        0  stm32f10x_it.o(i.HardFault_Handler)
+    i.I2C1_Init                              0x080040d4   Section        0  bsp_iic2.o(i.I2C1_Init)
+    i.I2C2_Init                              0x08004158   Section        0  bsp_iic2.o(i.I2C2_Init)
+    i.I2C_AcknowledgeConfig                  0x080041dc   Section        0  stm32f10x_i2c.o(i.I2C_AcknowledgeConfig)
+    i.I2C_Cmd                                0x080041f4   Section        0  stm32f10x_i2c.o(i.I2C_Cmd)
+    i.I2C_DeInit                             0x0800420c   Section        0  stm32f10x_i2c.o(i.I2C_DeInit)
+    i.I2C_Init                               0x08004244   Section        0  stm32f10x_i2c.o(i.I2C_Init)
+    i.MUX_18B20_OUT_GPIO_Config              0x08004330   Section        0  bsp_ds18b20.o(i.MUX_18B20_OUT_GPIO_Config)
+    MUX_18B20_OUT_GPIO_Config                0x08004331   Thumb Code    46  bsp_ds18b20.o(i.MUX_18B20_OUT_GPIO_Config)
+    i.MUX_18B20_OUT_Mode_IPU                 0x08004364   Section        0  bsp_ds18b20.o(i.MUX_18B20_OUT_Mode_IPU)
+    MUX_18B20_OUT_Mode_IPU                   0x08004365   Thumb Code    24  bsp_ds18b20.o(i.MUX_18B20_OUT_Mode_IPU)
+    i.MUX_18B20_OUT_Mode_Out_PP              0x08004380   Section        0  bsp_ds18b20.o(i.MUX_18B20_OUT_Mode_Out_PP)
+    MUX_18B20_OUT_Mode_Out_PP                0x08004381   Thumb Code    30  bsp_ds18b20.o(i.MUX_18B20_OUT_Mode_Out_PP)
+    i.MUX_18B20_OUT_Presence                 0x080043a4   Section        0  bsp_ds18b20.o(i.MUX_18B20_OUT_Presence)
+    MUX_18B20_OUT_Presence                   0x080043a5   Thumb Code    82  bsp_ds18b20.o(i.MUX_18B20_OUT_Presence)
+    i.MUX_18B20_OUT_Read_Bit                 0x080043fc   Section        0  bsp_ds18b20.o(i.MUX_18B20_OUT_Read_Bit)
+    MUX_18B20_OUT_Read_Bit                   0x080043fd   Thumb Code    86  bsp_ds18b20.o(i.MUX_18B20_OUT_Read_Bit)
+    i.MUX_18B20_OUT_Rst                      0x08004458   Section        0  bsp_ds18b20.o(i.MUX_18B20_OUT_Rst)
+    MUX_18B20_OUT_Rst                        0x08004459   Thumb Code    38  bsp_ds18b20.o(i.MUX_18B20_OUT_Rst)
+    i.MUX_18B20_OUT_Write_Bit                0x08004484   Section        0  bsp_ds18b20.o(i.MUX_18B20_OUT_Write_Bit)
+    i.MUX_18B20_OUT_Write_Byte               0x080044d8   Section        0  bsp_ds18b20.o(i.MUX_18B20_OUT_Write_Byte)
+    i.MUX_E1_GPIO_Config                     0x08004538   Section        0  bsp_ds18b20.o(i.MUX_E1_GPIO_Config)
+    MUX_E1_GPIO_Config                       0x08004539   Thumb Code    46  bsp_ds18b20.o(i.MUX_E1_GPIO_Config)
+    i.MUX_E2_GPIO_Config                     0x0800456c   Section        0  bsp_ds18b20.o(i.MUX_E2_GPIO_Config)
+    MUX_E2_GPIO_Config                       0x0800456d   Thumb Code    46  bsp_ds18b20.o(i.MUX_E2_GPIO_Config)
+    i.MUX_E3_GPIO_Config                     0x080045a0   Section        0  bsp_ds18b20.o(i.MUX_E3_GPIO_Config)
+    MUX_E3_GPIO_Config                       0x080045a1   Thumb Code    44  bsp_ds18b20.o(i.MUX_E3_GPIO_Config)
+    i.MUX_E4_GPIO_Config                     0x080045d0   Section        0  bsp_ds18b20.o(i.MUX_E4_GPIO_Config)
+    MUX_E4_GPIO_Config                       0x080045d1   Thumb Code    46  bsp_ds18b20.o(i.MUX_E4_GPIO_Config)
+    i.MUX_E5_GPIO_Config                     0x08004604   Section        0  bsp_ds18b20.o(i.MUX_E5_GPIO_Config)
+    MUX_E5_GPIO_Config                       0x08004605   Thumb Code    46  bsp_ds18b20.o(i.MUX_E5_GPIO_Config)
+    i.MUX_S0_GPIO_Config                     0x08004638   Section        0  bsp_ds18b20.o(i.MUX_S0_GPIO_Config)
+    MUX_S0_GPIO_Config                       0x08004639   Thumb Code    50  bsp_ds18b20.o(i.MUX_S0_GPIO_Config)
+    i.MUX_S1_GPIO_Config                     0x08004670   Section        0  bsp_ds18b20.o(i.MUX_S1_GPIO_Config)
+    MUX_S1_GPIO_Config                       0x08004671   Thumb Code    50  bsp_ds18b20.o(i.MUX_S1_GPIO_Config)
+    i.MUX_S2_GPIO_Config                     0x080046a8   Section        0  bsp_ds18b20.o(i.MUX_S2_GPIO_Config)
+    MUX_S2_GPIO_Config                       0x080046a9   Thumb Code    50  bsp_ds18b20.o(i.MUX_S2_GPIO_Config)
+    i.MUX_S3_GPIO_Config                     0x080046e0   Section        0  bsp_ds18b20.o(i.MUX_S3_GPIO_Config)
+    MUX_S3_GPIO_Config                       0x080046e1   Thumb Code    50  bsp_ds18b20.o(i.MUX_S3_GPIO_Config)
+    i.MemManage_Handler                      0x08004718   Section        0  stm32f10x_it.o(i.MemManage_Handler)
+    i.NMI_Handler                            0x0800471c   Section        0  stm32f10x_it.o(i.NMI_Handler)
+    i.NVIC_Configuration                     0x0800471e   Section        0  main.o(i.NVIC_Configuration)
+    i.NVIC_Init                              0x08004748   Section        0  misc.o(i.NVIC_Init)
+    i.NVIC_PriorityGroupConfig               0x080047b8   Section        0  misc.o(i.NVIC_PriorityGroupConfig)
+    i.PendSV_Handler                         0x080047cc   Section        0  stm32f10x_it.o(i.PendSV_Handler)
+    i.RCC_APB1PeriphClockCmd                 0x080047d0   Section        0  stm32f10x_rcc.o(i.RCC_APB1PeriphClockCmd)
+    i.RCC_APB1PeriphResetCmd                 0x080047f0   Section        0  stm32f10x_rcc.o(i.RCC_APB1PeriphResetCmd)
+    i.RCC_APB2PeriphClockCmd                 0x08004810   Section        0  stm32f10x_rcc.o(i.RCC_APB2PeriphClockCmd)
+    i.RCC_GetClocksFreq                      0x08004830   Section        0  stm32f10x_rcc.o(i.RCC_GetClocksFreq)
+    i.STRONG_PULLUP_GPIO_Config              0x08004904   Section        0  bsp_ds18b20.o(i.STRONG_PULLUP_GPIO_Config)
+    STRONG_PULLUP_GPIO_Config                0x08004905   Thumb Code    46  bsp_ds18b20.o(i.STRONG_PULLUP_GPIO_Config)
+    i.SVC_Handler                            0x08004938   Section        0  stm32f10x_it.o(i.SVC_Handler)
+    i.SetSysClock                            0x0800493a   Section        0  system_stm32f10x.o(i.SetSysClock)
+    SetSysClock                              0x0800493b   Thumb Code     8  system_stm32f10x.o(i.SetSysClock)
+    i.SetSysClockTo72                        0x08004944   Section        0  system_stm32f10x.o(i.SetSysClockTo72)
+    SetSysClockTo72                          0x08004945   Thumb Code   214  system_stm32f10x.o(i.SetSysClockTo72)
+    i.SysTick_Handler                        0x08004a24   Section        0  stm32f10x_it.o(i.SysTick_Handler)
+    i.SysTick_Init                           0x08004a2c   Section        0  bsp_systick.o(i.SysTick_Init)
+    i.SystemInit                             0x08004aa8   Section        0  system_stm32f10x.o(i.SystemInit)
+    i.TEST_ADDR0_GPIO_Config                 0x08004b08   Section        0  bsp_ds18b20.o(i.TEST_ADDR0_GPIO_Config)
+    TEST_ADDR0_GPIO_Config                   0x08004b09   Thumb Code    50  bsp_ds18b20.o(i.TEST_ADDR0_GPIO_Config)
+    i.TEST_ADDR1_GPIO_Config                 0x08004b40   Section        0  bsp_ds18b20.o(i.TEST_ADDR1_GPIO_Config)
+    TEST_ADDR1_GPIO_Config                   0x08004b41   Thumb Code    50  bsp_ds18b20.o(i.TEST_ADDR1_GPIO_Config)
+    i.TEST_ADDR2_GPIO_Config                 0x08004b78   Section        0  bsp_ds18b20.o(i.TEST_ADDR2_GPIO_Config)
+    TEST_ADDR2_GPIO_Config                   0x08004b79   Thumb Code    50  bsp_ds18b20.o(i.TEST_ADDR2_GPIO_Config)
+    i.TEST_ADDR3_GPIO_Config                 0x08004bb0   Section        0  bsp_ds18b20.o(i.TEST_ADDR3_GPIO_Config)
+    TEST_ADDR3_GPIO_Config                   0x08004bb1   Thumb Code    50  bsp_ds18b20.o(i.TEST_ADDR3_GPIO_Config)
+    i.TEST_ADDR4_GPIO_Config                 0x08004be8   Section        0  bsp_ds18b20.o(i.TEST_ADDR4_GPIO_Config)
+    TEST_ADDR4_GPIO_Config                   0x08004be9   Thumb Code    50  bsp_ds18b20.o(i.TEST_ADDR4_GPIO_Config)
+    i.TEST_ADDR5_GPIO_Config                 0x08004c20   Section        0  bsp_ds18b20.o(i.TEST_ADDR5_GPIO_Config)
+    TEST_ADDR5_GPIO_Config                   0x08004c21   Thumb Code    46  bsp_ds18b20.o(i.TEST_ADDR5_GPIO_Config)
+    i.TEST_ADDR6_GPIO_Config                 0x08004c54   Section        0  bsp_ds18b20.o(i.TEST_ADDR6_GPIO_Config)
+    TEST_ADDR6_GPIO_Config                   0x08004c55   Thumb Code    46  bsp_ds18b20.o(i.TEST_ADDR6_GPIO_Config)
+    i.TEST_ADDR7_GPIO_Config                 0x08004c88   Section        0  bsp_ds18b20.o(i.TEST_ADDR7_GPIO_Config)
+    TEST_ADDR7_GPIO_Config                   0x08004c89   Thumb Code    46  bsp_ds18b20.o(i.TEST_ADDR7_GPIO_Config)
+    i.TEST_DATA0_GPIO_Config                 0x08004cbc   Section        0  bsp_ds18b20.o(i.TEST_DATA0_GPIO_Config)
+    TEST_DATA0_GPIO_Config                   0x08004cbd   Thumb Code    38  bsp_ds18b20.o(i.TEST_DATA0_GPIO_Config)
+    i.TEST_DATA1_GPIO_Config                 0x08004ce8   Section        0  bsp_ds18b20.o(i.TEST_DATA1_GPIO_Config)
+    TEST_DATA1_GPIO_Config                   0x08004ce9   Thumb Code    38  bsp_ds18b20.o(i.TEST_DATA1_GPIO_Config)
+    i.TEST_DATA2_GPIO_Config                 0x08004d14   Section        0  bsp_ds18b20.o(i.TEST_DATA2_GPIO_Config)
+    TEST_DATA2_GPIO_Config                   0x08004d15   Thumb Code    38  bsp_ds18b20.o(i.TEST_DATA2_GPIO_Config)
+    i.TEST_DATA3_GPIO_Config                 0x08004d40   Section        0  bsp_ds18b20.o(i.TEST_DATA3_GPIO_Config)
+    TEST_DATA3_GPIO_Config                   0x08004d41   Thumb Code    36  bsp_ds18b20.o(i.TEST_DATA3_GPIO_Config)
+    i.TEST_DATA4_GPIO_Config                 0x08004d68   Section        0  bsp_ds18b20.o(i.TEST_DATA4_GPIO_Config)
+    TEST_DATA4_GPIO_Config                   0x08004d69   Thumb Code    40  bsp_ds18b20.o(i.TEST_DATA4_GPIO_Config)
+    i.TEST_DATA5_GPIO_Config                 0x08004d94   Section        0  bsp_ds18b20.o(i.TEST_DATA5_GPIO_Config)
+    TEST_DATA5_GPIO_Config                   0x08004d95   Thumb Code    40  bsp_ds18b20.o(i.TEST_DATA5_GPIO_Config)
+    i.TEST_DATA6_GPIO_Config                 0x08004dc0   Section        0  bsp_ds18b20.o(i.TEST_DATA6_GPIO_Config)
+    TEST_DATA6_GPIO_Config                   0x08004dc1   Thumb Code    40  bsp_ds18b20.o(i.TEST_DATA6_GPIO_Config)
+    i.TEST_DATA7_GPIO_Config                 0x08004dec   Section        0  bsp_ds18b20.o(i.TEST_DATA7_GPIO_Config)
+    TEST_DATA7_GPIO_Config                   0x08004ded   Thumb Code    40  bsp_ds18b20.o(i.TEST_DATA7_GPIO_Config)
+    i.TOTAL_DQ_OUT_GPIO_Config               0x08004e18   Section        0  bsp_ds18b20.o(i.TOTAL_DQ_OUT_GPIO_Config)
+    TOTAL_DQ_OUT_GPIO_Config                 0x08004e19   Thumb Code    46  bsp_ds18b20.o(i.TOTAL_DQ_OUT_GPIO_Config)
+    i.TOTAL_DQ_OUT_Mode_IPU                  0x08004e4c   Section        0  bsp_ds18b20.o(i.TOTAL_DQ_OUT_Mode_IPU)
+    TOTAL_DQ_OUT_Mode_IPU                    0x08004e4d   Thumb Code    24  bsp_ds18b20.o(i.TOTAL_DQ_OUT_Mode_IPU)
+    i.TOTAL_DQ_OUT_Mode_Out_PP               0x08004e68   Section        0  bsp_ds18b20.o(i.TOTAL_DQ_OUT_Mode_Out_PP)
+    TOTAL_DQ_OUT_Mode_Out_PP                 0x08004e69   Thumb Code    30  bsp_ds18b20.o(i.TOTAL_DQ_OUT_Mode_Out_PP)
+    i.TOTAL_DQ_OUT_Presence                  0x08004e8c   Section        0  bsp_ds18b20.o(i.TOTAL_DQ_OUT_Presence)
+    TOTAL_DQ_OUT_Presence                    0x08004e8d   Thumb Code   100  bsp_ds18b20.o(i.TOTAL_DQ_OUT_Presence)
+    i.TOTAL_DQ_OUT_Read_Bit                  0x08004efc   Section        0  bsp_ds18b20.o(i.TOTAL_DQ_OUT_Read_Bit)
+    TOTAL_DQ_OUT_Read_Bit                    0x08004efd   Thumb Code    78  bsp_ds18b20.o(i.TOTAL_DQ_OUT_Read_Bit)
+    i.TOTAL_DQ_OUT_Rst                       0x08004f50   Section        0  bsp_ds18b20.o(i.TOTAL_DQ_OUT_Rst)
+    TOTAL_DQ_OUT_Rst                         0x08004f51   Thumb Code    84  bsp_ds18b20.o(i.TOTAL_DQ_OUT_Rst)
+    i.TOTAL_DQ_OUT_Write_Bit                 0x08004fa8   Section        0  bsp_ds18b20.o(i.TOTAL_DQ_OUT_Write_Bit)
+    i.TOTAL_DQ_OUT_Write_Byte                0x08005014   Section        0  bsp_ds18b20.o(i.TOTAL_DQ_OUT_Write_Byte)
+    i.TimingDelay_Decrement                  0x08005090   Section        0  bsp_systick.o(i.TimingDelay_Decrement)
+    i.USART1_Config                          0x080050a8   Section        0  bsp_usart1.o(i.USART1_Config)
+    i.USART1_IRQHandler                      0x08005144   Section        0  stm32f10x_it.o(i.USART1_IRQHandler)
+    i.USART_ClearITPendingBit                0x08005298   Section        0  stm32f10x_usart.o(i.USART_ClearITPendingBit)
+    i.USART_Cmd                              0x080052b6   Section        0  stm32f10x_usart.o(i.USART_Cmd)
+    i.USART_GetFlagStatus                    0x080052ce   Section        0  stm32f10x_usart.o(i.USART_GetFlagStatus)
+    i.USART_GetITStatus                      0x080052e8   Section        0  stm32f10x_usart.o(i.USART_GetITStatus)
+    i.USART_ITConfig                         0x0800533c   Section        0  stm32f10x_usart.o(i.USART_ITConfig)
+    i.USART_Init                             0x08005388   Section        0  stm32f10x_usart.o(i.USART_Init)
+    i.USART_ReceiveData                      0x08005460   Section        0  stm32f10x_usart.o(i.USART_ReceiveData)
+    i.USART_SendData                         0x0800546a   Section        0  stm32f10x_usart.o(i.USART_SendData)
+    i.UsageFault_Handler                     0x08005472   Section        0  stm32f10x_it.o(i.UsageFault_Handler)
+    i.__0printf                              0x08005478   Section        0  printfa.o(i.__0printf)
+    i.__scatterload_copy                     0x08005498   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x080054a6   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x080054a8   Section       14  handlers.o(i.__scatterload_zeroinit)
+    i._fp_digits                             0x080054b8   Section        0  printfa.o(i._fp_digits)
+    _fp_digits                               0x080054b9   Thumb Code   366  printfa.o(i._fp_digits)
+    i._printf_core                           0x0800563c   Section        0  printfa.o(i._printf_core)
+    _printf_core                             0x0800563d   Thumb Code  1744  printfa.o(i._printf_core)
+    i._printf_post_padding                   0x08005d18   Section        0  printfa.o(i._printf_post_padding)
+    _printf_post_padding                     0x08005d19   Thumb Code    36  printfa.o(i._printf_post_padding)
+    i._printf_pre_padding                    0x08005d3c   Section        0  printfa.o(i._printf_pre_padding)
+    _printf_pre_padding                      0x08005d3d   Thumb Code    46  printfa.o(i._printf_pre_padding)
+    i.adc_dr_256                             0x08005d6a   Section        0  bsp_ds18b20.o(i.adc_dr_256)
+    i.adc_dr_512                             0x08005d8c   Section        0  bsp_ds18b20.o(i.adc_dr_512)
+    i.check_coeff_boundary                   0x08005db0   Section        0  bsp_ds18b20.o(i.check_coeff_boundary)
+    i.close_adc_avg                          0x08005fa8   Section        0  bsp_ds18b20.o(i.close_adc_avg)
+    i.close_adc_delay                        0x08005fca   Section        0  bsp_ds18b20.o(i.close_adc_delay)
+    i.close_powerdn                          0x08005fec   Section        0  bsp_ds18b20.o(i.close_powerdn)
+    i.close_pulldown_powerdn                 0x0800600e   Section        0  bsp_ds18b20.o(i.close_pulldown_powerdn)
+    i.fputc                                  0x08006030   Section        0  bsp_usart1.o(i.fputc)
+    i.main                                   0x08006064   Section        0  main.o(i.main)
+    i.open_adc_avg                           0x08006954   Section        0  bsp_ds18b20.o(i.open_adc_avg)
+    i.open_adc_delay                         0x08006976   Section        0  bsp_ds18b20.o(i.open_adc_delay)
+    i.open_powerdn                           0x08006998   Section        0  bsp_ds18b20.o(i.open_powerdn)
+    i.open_pulldown_powerdn                  0x080069ba   Section        0  bsp_ds18b20.o(i.open_pulldown_powerdn)
+    i.search_device_on_bus                   0x080069dc   Section        0  bsp_ds18b20.o(i.search_device_on_bus)
+    i.show_system_parameters                 0x08006a14   Section        0  bsp_ds18b20.o(i.show_system_parameters)
+    .conststring                             0x08006b00   Section      134  bsp_ds18b20.o(.conststring)
     .data                                    0x20000000   Section       20  system_stm32f10x.o(.data)
     .data                                    0x20000014   Section       20  stm32f10x_rcc.o(.data)
     APBAHBPrescTable                         0x20000014   Data          16  stm32f10x_rcc.o(.data)
@@ -2081,33 +2081,33 @@ Image Symbol Table
     __aeabi_fadd                             0x0800018d   Thumb Code   164  fadd.o(.text)
     __aeabi_fsub                             0x08000231   Thumb Code     6  fadd.o(.text)
     __aeabi_frsub                            0x08000237   Thumb Code     6  fadd.o(.text)
-    __aeabi_fdiv                             0x0800023d   Thumb Code   128  fdiv.o(.text)
-    __aeabi_dadd                             0x080002bd   Thumb Code   322  dadd.o(.text)
-    __aeabi_dsub                             0x080003ff   Thumb Code     6  dadd.o(.text)
-    __aeabi_drsub                            0x08000405   Thumb Code     6  dadd.o(.text)
-    __aeabi_dmul                             0x0800040b   Thumb Code   228  dmul.o(.text)
-    __aeabi_ddiv                             0x080004ef   Thumb Code   222  ddiv.o(.text)
-    __aeabi_i2d                              0x080005cd   Thumb Code    34  dflti.o(.text)
-    __aeabi_ui2d                             0x080005ef   Thumb Code    26  dfltui.o(.text)
-    __aeabi_f2d                              0x08000609   Thumb Code    38  f2d.o(.text)
-    __aeabi_d2f                              0x0800062f   Thumb Code    56  d2f.o(.text)
-    __aeabi_cfcmpeq                          0x08000669   Thumb Code     0  cfcmple.o(.text)
-    __aeabi_cfcmple                          0x08000669   Thumb Code    20  cfcmple.o(.text)
-    __aeabi_cfrcmple                         0x0800067d   Thumb Code    20  cfrcmple.o(.text)
-    __aeabi_uidiv                            0x08000691   Thumb Code     0  uidiv.o(.text)
-    __aeabi_uidivmod                         0x08000691   Thumb Code    44  uidiv.o(.text)
-    __aeabi_uldivmod                         0x080006bd   Thumb Code    98  uldiv.o(.text)
-    __aeabi_llsl                             0x0800071f   Thumb Code    30  llshl.o(.text)
-    _ll_shift_l                              0x0800071f   Thumb Code     0  llshl.o(.text)
-    __aeabi_lasr                             0x0800073d   Thumb Code    36  llsshr.o(.text)
-    _ll_sshift_r                             0x0800073d   Thumb Code     0  llsshr.o(.text)
-    __I$use$fp                               0x08000761   Thumb Code     0  iusefp.o(.text)
-    _float_round                             0x08000761   Thumb Code    18  fepilogue.o(.text)
-    _float_epilogue                          0x08000773   Thumb Code    90  fepilogue.o(.text)
-    _double_round                            0x080007cd   Thumb Code    26  depilogue.o(.text)
-    _double_epilogue                         0x080007e7   Thumb Code   164  depilogue.o(.text)
-    __aeabi_d2ulz                            0x0800088b   Thumb Code    48  dfixul.o(.text)
-    __aeabi_cdrcmple                         0x080008bd   Thumb Code    38  cdrcmple.o(.text)
+    __aeabi_fdiv                             0x0800023d   Thumb Code   124  fdiv.o(.text)
+    __aeabi_dadd                             0x080002b9   Thumb Code   322  dadd.o(.text)
+    __aeabi_dsub                             0x080003fb   Thumb Code     6  dadd.o(.text)
+    __aeabi_drsub                            0x08000401   Thumb Code     6  dadd.o(.text)
+    __aeabi_dmul                             0x08000407   Thumb Code   228  dmul.o(.text)
+    __aeabi_ddiv                             0x080004eb   Thumb Code   222  ddiv.o(.text)
+    __aeabi_i2d                              0x080005c9   Thumb Code    34  dflti.o(.text)
+    __aeabi_ui2d                             0x080005eb   Thumb Code    26  dfltui.o(.text)
+    __aeabi_f2d                              0x08000605   Thumb Code    38  f2d.o(.text)
+    __aeabi_d2f                              0x0800062b   Thumb Code    56  d2f.o(.text)
+    __aeabi_cfcmpeq                          0x08000665   Thumb Code     0  cfcmple.o(.text)
+    __aeabi_cfcmple                          0x08000665   Thumb Code    20  cfcmple.o(.text)
+    __aeabi_cfrcmple                         0x08000679   Thumb Code    20  cfrcmple.o(.text)
+    __aeabi_uidiv                            0x0800068d   Thumb Code     0  uidiv.o(.text)
+    __aeabi_uidivmod                         0x0800068d   Thumb Code    44  uidiv.o(.text)
+    __aeabi_uldivmod                         0x080006b9   Thumb Code    98  uldiv.o(.text)
+    __aeabi_llsl                             0x0800071b   Thumb Code    30  llshl.o(.text)
+    _ll_shift_l                              0x0800071b   Thumb Code     0  llshl.o(.text)
+    __aeabi_lasr                             0x08000739   Thumb Code    36  llsshr.o(.text)
+    _ll_sshift_r                             0x08000739   Thumb Code     0  llsshr.o(.text)
+    __I$use$fp                               0x0800075d   Thumb Code     0  iusefp.o(.text)
+    _float_round                             0x0800075d   Thumb Code    18  fepilogue.o(.text)
+    _float_epilogue                          0x0800076f   Thumb Code    92  fepilogue.o(.text)
+    _double_round                            0x080007cb   Thumb Code    30  depilogue.o(.text)
+    _double_epilogue                         0x080007e9   Thumb Code   156  depilogue.o(.text)
+    __aeabi_d2ulz                            0x08000885   Thumb Code    48  dfixul.o(.text)
+    __aeabi_cdrcmple                         0x080008b5   Thumb Code    48  cdrcmple.o(.text)
     __scatterload                            0x080008e5   Thumb Code    28  init.o(.text)
     __scatterload_rt2                        0x080008e5   Thumb Code     0  init.o(.text)
     __aeabi_llsr                             0x08000909   Thumb Code    32  llushr.o(.text)
@@ -2122,130 +2122,130 @@ Image Symbol Table
     Check_MTP                                0x08000dc1   Thumb Code  2140  bsp_ds18b20.o(i.Check_MTP)
     Check_Match_ROM                          0x08001729   Thumb Code   360  bsp_ds18b20.o(i.Check_Match_ROM)
     Check_Search_ROM                         0x080019d5   Thumb Code   140  bsp_ds18b20.o(i.Check_Search_ROM)
-    Check_Search_follow_function             0x08001ab1   Thumb Code   116  bsp_ds18b20.o(i.Check_Search_follow_function)
-    Check_Temperature_Code                   0x08001ba1   Thumb Code   240  bsp_ds18b20.o(i.Check_Temperature_Code)
-    Check_Temperature_Code_14bit             0x08001d31   Thumb Code   268  bsp_ds18b20.o(i.Check_Temperature_Code_14bit)
-    Check_rw_parameters                      0x08001edd   Thumb Code   466  bsp_ds18b20.o(i.Check_rw_parameters)
-    Check_rw_rom_code                        0x08002181   Thumb Code   446  bsp_ds18b20.o(i.Check_rw_rom_code)
-    Check_rw_scratchpad                      0x08002405   Thumb Code   234  bsp_ds18b20.o(i.Check_rw_scratchpad)
-    Check_rw_scratchpad_ext                  0x080025c1   Thumb Code   300  bsp_ds18b20.o(i.Check_rw_scratchpad_ext)
-    Check_rw_user                            0x080027d1   Thumb Code   232  bsp_ds18b20.o(i.Check_rw_user)
-    Check_rw_user_ext                        0x08002969   Thumb Code   300  bsp_ds18b20.o(i.Check_rw_user_ext)
-    DQ_Alarm_SearchROM                       0x08002b2d   Thumb Code   326  bsp_ds18b20.o(i.DQ_Alarm_SearchROM)
-    DQ_Check_Power_Supply                    0x08002cb1   Thumb Code    60  bsp_ds18b20.o(i.DQ_Check_Power_Supply)
-    DQ_Copy_PAGE0                            0x08002d39   Thumb Code    48  bsp_ds18b20.o(i.DQ_Copy_PAGE0)
-    DQ_Copy_PAGE1                            0x08002d69   Thumb Code    48  bsp_ds18b20.o(i.DQ_Copy_PAGE1)
-    DQ_Read2Bit                              0x08002dc3   Thumb Code    42  bsp_ds18b20.o(i.DQ_Read2Bit)
-    DQ_Read_Byte                             0x08002e17   Thumb Code    42  bsp_ds18b20.o(i.DQ_Read_Byte)
-    DQ_Read_Parameters                       0x08002e41   Thumb Code    56  bsp_ds18b20.o(i.DQ_Read_Parameters)
-    DQ_Read_Rom_Code                         0x08002e79   Thumb Code    76  bsp_ds18b20.o(i.DQ_Read_Rom_Code)
-    DQ_Read_Scrpad                           0x08002eed   Thumb Code   106  bsp_ds18b20.o(i.DQ_Read_Scrpad)
-    DQ_Read_Scrpad_Ext                       0x08002fc5   Thumb Code    56  bsp_ds18b20.o(i.DQ_Read_Scrpad_Ext)
-    DQ_Read_Scrpad_Ext_match2                0x08002ffd   Thumb Code    82  bsp_ds18b20.o(i.DQ_Read_Scrpad_Ext_match2)
-    DQ_Read_Scrpad_match2                    0x0800304f   Thumb Code    82  bsp_ds18b20.o(i.DQ_Read_Scrpad_match2)
-    DQ_Read_User_Ext                         0x080030a1   Thumb Code    56  bsp_ds18b20.o(i.DQ_Read_User_Ext)
-    DQ_Read_User_Ext_match2                  0x080030d9   Thumb Code    82  bsp_ds18b20.o(i.DQ_Read_User_Ext_match2)
-    DQ_Recall_EE                             0x0800312d   Thumb Code    40  bsp_ds18b20.o(i.DQ_Recall_EE)
-    DQ_Recall_PAGE0_RES                      0x08003159   Thumb Code    40  bsp_ds18b20.o(i.DQ_Recall_PAGE0_RES)
-    DQ_Recall_PAGE1                          0x08003185   Thumb Code    42  bsp_ds18b20.o(i.DQ_Recall_PAGE1)
-    DQ_SearchROM                             0x080031dd   Thumb Code   390  bsp_ds18b20.o(i.DQ_SearchROM)
-    DQ_SearchROM_Read_Scratchpad             0x080033b5   Thumb Code   374  bsp_ds18b20.o(i.DQ_SearchROM_Read_Scratchpad)
-    DQ_SearchROM_Write_Scratchpad            0x08003569   Thumb Code   358  bsp_ds18b20.o(i.DQ_SearchROM_Write_Scratchpad)
-    DQ_Setup_ROM                             0x0800370d   Thumb Code   110  bsp_ds18b20.o(i.DQ_Setup_ROM)
-    DQ_Write_Bit                             0x0800377b   Thumb Code    56  bsp_ds18b20.o(i.DQ_Write_Bit)
-    DQ_Write_Byte                            0x080037b3   Thumb Code    56  bsp_ds18b20.o(i.DQ_Write_Byte)
-    DQ_Write_Parameters                      0x080037eb   Thumb Code   118  bsp_ds18b20.o(i.DQ_Write_Parameters)
-    DQ_Write_Parameters_3byte                0x08003861   Thumb Code    68  bsp_ds18b20.o(i.DQ_Write_Parameters_3byte)
-    DQ_Write_Scratchpad                      0x080038a5   Thumb Code    68  bsp_ds18b20.o(i.DQ_Write_Scratchpad)
-    DQ_Write_Scratchpad_Ext                  0x080038e9   Thumb Code    88  bsp_ds18b20.o(i.DQ_Write_Scratchpad_Ext)
-    DQ_Write_Scratchpad_Ext_Match            0x08003941   Thumb Code   114  bsp_ds18b20.o(i.DQ_Write_Scratchpad_Ext_Match)
-    DQ_Write_Scratchpad_Match                0x080039b3   Thumb Code    94  bsp_ds18b20.o(i.DQ_Write_Scratchpad_Match)
-    DQ_Write_User                            0x08003a11   Thumb Code    68  bsp_ds18b20.o(i.DQ_Write_User)
-    DQ_Write_User_Ext                        0x08003a55   Thumb Code    88  bsp_ds18b20.o(i.DQ_Write_User_Ext)
-    DQ_Write_User_Ext_Match                  0x08003aad   Thumb Code   114  bsp_ds18b20.o(i.DQ_Write_User_Ext_Match)
-    DQ_Write_User_Match                      0x08003b1f   Thumb Code    94  bsp_ds18b20.o(i.DQ_Write_User_Match)
-    DUT_DQ_OUT_Get_Temp                      0x08003bad   Thumb Code   162  bsp_ds18b20.o(i.DUT_DQ_OUT_Get_Temp)
-    DUT_DQ_OUT_Get_Temp_14bit                0x08003c55   Thumb Code   198  bsp_ds18b20.o(i.DUT_DQ_OUT_Get_Temp_14bit)
-    DUT_DQ_OUT_Read_Byte                     0x08003db5   Thumb Code    34  bsp_ds18b20.o(i.DUT_DQ_OUT_Read_Byte)
-    DUT_DQ_OUT_Write_Bit                     0x08003e39   Thumb Code    74  bsp_ds18b20.o(i.DUT_DQ_OUT_Write_Bit)
-    DUT_DQ_OUT_Write_Byte                    0x08003e89   Thumb Code    92  bsp_ds18b20.o(i.DUT_DQ_OUT_Write_Byte)
-    DebugMon_Handler                         0x08003ee9   Thumb Code     2  stm32f10x_it.o(i.DebugMon_Handler)
-    Delay_us                                 0x08003eed   Thumb Code    36  bsp_systick.o(i.Delay_us)
-    GPIO_Config                              0x08003f15   Thumb Code   120  bsp_ds18b20.o(i.GPIO_Config)
-    GPIO_Init                                0x08003f8d   Thumb Code   274  stm32f10x_gpio.o(i.GPIO_Init)
-    GPIO_ReadInputDataBit                    0x0800409f   Thumb Code    18  stm32f10x_gpio.o(i.GPIO_ReadInputDataBit)
-    GPIO_ResetBits                           0x080040b1   Thumb Code     4  stm32f10x_gpio.o(i.GPIO_ResetBits)
-    GPIO_SetBits                             0x080040b5   Thumb Code     4  stm32f10x_gpio.o(i.GPIO_SetBits)
-    HardFault_Handler                        0x080040b9   Thumb Code    16  stm32f10x_it.o(i.HardFault_Handler)
-    I2C1_Init                                0x080040cd   Thumb Code   118  bsp_iic2.o(i.I2C1_Init)
-    I2C2_Init                                0x08004151   Thumb Code   120  bsp_iic2.o(i.I2C2_Init)
-    I2C_AcknowledgeConfig                    0x080041d5   Thumb Code    24  stm32f10x_i2c.o(i.I2C_AcknowledgeConfig)
-    I2C_Cmd                                  0x080041ed   Thumb Code    24  stm32f10x_i2c.o(i.I2C_Cmd)
-    I2C_DeInit                               0x08004205   Thumb Code    50  stm32f10x_i2c.o(i.I2C_DeInit)
-    I2C_Init                                 0x0800423d   Thumb Code   222  stm32f10x_i2c.o(i.I2C_Init)
-    MUX_18B20_OUT_Write_Bit                  0x0800447d   Thumb Code    78  bsp_ds18b20.o(i.MUX_18B20_OUT_Write_Bit)
-    MUX_18B20_OUT_Write_Byte                 0x080044d1   Thumb Code    92  bsp_ds18b20.o(i.MUX_18B20_OUT_Write_Byte)
-    MemManage_Handler                        0x08004711   Thumb Code     4  stm32f10x_it.o(i.MemManage_Handler)
-    NMI_Handler                              0x08004715   Thumb Code     2  stm32f10x_it.o(i.NMI_Handler)
-    NVIC_Configuration                       0x08004717   Thumb Code    40  main.o(i.NVIC_Configuration)
-    NVIC_Init                                0x08004741   Thumb Code   102  misc.o(i.NVIC_Init)
-    NVIC_PriorityGroupConfig                 0x080047b5   Thumb Code    10  misc.o(i.NVIC_PriorityGroupConfig)
-    PendSV_Handler                           0x080047c9   Thumb Code     2  stm32f10x_it.o(i.PendSV_Handler)
-    RCC_APB1PeriphClockCmd                   0x080047cd   Thumb Code    26  stm32f10x_rcc.o(i.RCC_APB1PeriphClockCmd)
-    RCC_APB1PeriphResetCmd                   0x080047ed   Thumb Code    26  stm32f10x_rcc.o(i.RCC_APB1PeriphResetCmd)
-    RCC_APB2PeriphClockCmd                   0x0800480d   Thumb Code    26  stm32f10x_rcc.o(i.RCC_APB2PeriphClockCmd)
-    RCC_GetClocksFreq                        0x0800482d   Thumb Code   192  stm32f10x_rcc.o(i.RCC_GetClocksFreq)
-    SVC_Handler                              0x08004935   Thumb Code     2  stm32f10x_it.o(i.SVC_Handler)
-    SysTick_Handler                          0x08004a1d   Thumb Code     8  stm32f10x_it.o(i.SysTick_Handler)
-    SysTick_Init                             0x08004a25   Thumb Code   106  bsp_systick.o(i.SysTick_Init)
-    SystemInit                               0x08004aa1   Thumb Code    78  system_stm32f10x.o(i.SystemInit)
-    TOTAL_DQ_OUT_Write_Bit                   0x08004fa1   Thumb Code   102  bsp_ds18b20.o(i.TOTAL_DQ_OUT_Write_Bit)
-    TOTAL_DQ_OUT_Write_Byte                  0x0800500d   Thumb Code   118  bsp_ds18b20.o(i.TOTAL_DQ_OUT_Write_Byte)
-    TimingDelay_Decrement                    0x08005089   Thumb Code    18  bsp_systick.o(i.TimingDelay_Decrement)
-    USART1_Config                            0x080050a1   Thumb Code   146  bsp_usart1.o(i.USART1_Config)
-    USART1_IRQHandler                        0x0800513d   Thumb Code   330  stm32f10x_it.o(i.USART1_IRQHandler)
-    USART_ClearITPendingBit                  0x08005291   Thumb Code    30  stm32f10x_usart.o(i.USART_ClearITPendingBit)
-    USART_Cmd                                0x080052af   Thumb Code    24  stm32f10x_usart.o(i.USART_Cmd)
-    USART_GetFlagStatus                      0x080052c7   Thumb Code    26  stm32f10x_usart.o(i.USART_GetFlagStatus)
-    USART_GetITStatus                        0x080052e1   Thumb Code    84  stm32f10x_usart.o(i.USART_GetITStatus)
-    USART_ITConfig                           0x08005335   Thumb Code    74  stm32f10x_usart.o(i.USART_ITConfig)
-    USART_Init                               0x08005381   Thumb Code   210  stm32f10x_usart.o(i.USART_Init)
-    USART_ReceiveData                        0x08005459   Thumb Code    10  stm32f10x_usart.o(i.USART_ReceiveData)
-    USART_SendData                           0x08005463   Thumb Code     8  stm32f10x_usart.o(i.USART_SendData)
-    UsageFault_Handler                       0x0800546b   Thumb Code     4  stm32f10x_it.o(i.UsageFault_Handler)
-    __0printf                                0x08005471   Thumb Code    22  printfa.o(i.__0printf)
-    __1printf                                0x08005471   Thumb Code     0  printfa.o(i.__0printf)
-    __2printf                                0x08005471   Thumb Code     0  printfa.o(i.__0printf)
-    __c89printf                              0x08005471   Thumb Code     0  printfa.o(i.__0printf)
-    printf                                   0x08005471   Thumb Code     0  printfa.o(i.__0printf)
-    __scatterload_copy                       0x08005491   Thumb Code    14  handlers.o(i.__scatterload_copy)
-    __scatterload_null                       0x0800549f   Thumb Code     2  handlers.o(i.__scatterload_null)
-    __scatterload_zeroinit                   0x080054a1   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
-    adc_dr_256                               0x08005d53   Thumb Code    34  bsp_ds18b20.o(i.adc_dr_256)
-    adc_dr_512                               0x08005d75   Thumb Code    34  bsp_ds18b20.o(i.adc_dr_512)
-    check_coeff_boundary                     0x08005d99   Thumb Code   306  bsp_ds18b20.o(i.check_coeff_boundary)
-    close_adc_avg                            0x08005f91   Thumb Code    34  bsp_ds18b20.o(i.close_adc_avg)
-    close_adc_delay                          0x08005fb3   Thumb Code    34  bsp_ds18b20.o(i.close_adc_delay)
-    close_powerdn                            0x08005fd5   Thumb Code    34  bsp_ds18b20.o(i.close_powerdn)
-    close_pulldown_powerdn                   0x08005ff7   Thumb Code    34  bsp_ds18b20.o(i.close_pulldown_powerdn)
-    fputc                                    0x08006019   Thumb Code    46  bsp_usart1.o(i.fputc)
-    main                                     0x0800604d   Thumb Code  1866  main.o(i.main)
-    open_adc_avg                             0x0800693d   Thumb Code    34  bsp_ds18b20.o(i.open_adc_avg)
-    open_adc_delay                           0x0800695f   Thumb Code    34  bsp_ds18b20.o(i.open_adc_delay)
-    open_powerdn                             0x08006981   Thumb Code    34  bsp_ds18b20.o(i.open_powerdn)
-    open_pulldown_powerdn                    0x080069a3   Thumb Code    34  bsp_ds18b20.o(i.open_pulldown_powerdn)
-    search_device_on_bus                     0x080069c5   Thumb Code    24  bsp_ds18b20.o(i.search_device_on_bus)
-    show_system_parameters                   0x080069fd   Thumb Code   110  bsp_ds18b20.o(i.show_system_parameters)
-    Region$$Table$$Base                      0x08006b70   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x08006b90   Number         0  anon$$obj.o(Region$$Table)
+    Check_Search_follow_function             0x08001ab1   Thumb Code   114  bsp_ds18b20.o(i.Check_Search_follow_function)
+    Check_Temperature_Code                   0x08001ba5   Thumb Code   240  bsp_ds18b20.o(i.Check_Temperature_Code)
+    Check_Temperature_Code_14bit             0x08001d35   Thumb Code   268  bsp_ds18b20.o(i.Check_Temperature_Code_14bit)
+    Check_rw_parameters                      0x08001ee1   Thumb Code   466  bsp_ds18b20.o(i.Check_rw_parameters)
+    Check_rw_rom_code                        0x08002185   Thumb Code   446  bsp_ds18b20.o(i.Check_rw_rom_code)
+    Check_rw_scratchpad                      0x08002409   Thumb Code   234  bsp_ds18b20.o(i.Check_rw_scratchpad)
+    Check_rw_scratchpad_ext                  0x080025c5   Thumb Code   300  bsp_ds18b20.o(i.Check_rw_scratchpad_ext)
+    Check_rw_user                            0x080027d5   Thumb Code   232  bsp_ds18b20.o(i.Check_rw_user)
+    Check_rw_user_ext                        0x0800296d   Thumb Code   300  bsp_ds18b20.o(i.Check_rw_user_ext)
+    DQ_Alarm_SearchROM                       0x08002b31   Thumb Code   326  bsp_ds18b20.o(i.DQ_Alarm_SearchROM)
+    DQ_Check_Power_Supply                    0x08002cb5   Thumb Code    60  bsp_ds18b20.o(i.DQ_Check_Power_Supply)
+    DQ_Copy_PAGE0                            0x08002d3d   Thumb Code    48  bsp_ds18b20.o(i.DQ_Copy_PAGE0)
+    DQ_Copy_PAGE1                            0x08002d6d   Thumb Code    48  bsp_ds18b20.o(i.DQ_Copy_PAGE1)
+    DQ_Read2Bit                              0x08002dc7   Thumb Code    42  bsp_ds18b20.o(i.DQ_Read2Bit)
+    DQ_Read_Byte                             0x08002e1b   Thumb Code    42  bsp_ds18b20.o(i.DQ_Read_Byte)
+    DQ_Read_Parameters                       0x08002e45   Thumb Code    56  bsp_ds18b20.o(i.DQ_Read_Parameters)
+    DQ_Read_Rom_Code                         0x08002e7d   Thumb Code    76  bsp_ds18b20.o(i.DQ_Read_Rom_Code)
+    DQ_Read_Scrpad                           0x08002ef1   Thumb Code   106  bsp_ds18b20.o(i.DQ_Read_Scrpad)
+    DQ_Read_Scrpad_Ext                       0x08002fc9   Thumb Code    56  bsp_ds18b20.o(i.DQ_Read_Scrpad_Ext)
+    DQ_Read_Scrpad_Ext_match2                0x08003001   Thumb Code    82  bsp_ds18b20.o(i.DQ_Read_Scrpad_Ext_match2)
+    DQ_Read_Scrpad_match2                    0x08003053   Thumb Code    82  bsp_ds18b20.o(i.DQ_Read_Scrpad_match2)
+    DQ_Read_User_Ext                         0x080030a5   Thumb Code    56  bsp_ds18b20.o(i.DQ_Read_User_Ext)
+    DQ_Read_User_Ext_match2                  0x080030dd   Thumb Code    82  bsp_ds18b20.o(i.DQ_Read_User_Ext_match2)
+    DQ_Recall_EE                             0x08003131   Thumb Code    40  bsp_ds18b20.o(i.DQ_Recall_EE)
+    DQ_Recall_PAGE0_RES                      0x0800315d   Thumb Code    40  bsp_ds18b20.o(i.DQ_Recall_PAGE0_RES)
+    DQ_Recall_PAGE1                          0x08003189   Thumb Code    42  bsp_ds18b20.o(i.DQ_Recall_PAGE1)
+    DQ_SearchROM                             0x080031e1   Thumb Code   390  bsp_ds18b20.o(i.DQ_SearchROM)
+    DQ_SearchROM_Read_Scratchpad             0x080033b9   Thumb Code   374  bsp_ds18b20.o(i.DQ_SearchROM_Read_Scratchpad)
+    DQ_SearchROM_Write_Scratchpad            0x0800356d   Thumb Code   358  bsp_ds18b20.o(i.DQ_SearchROM_Write_Scratchpad)
+    DQ_Setup_ROM                             0x08003711   Thumb Code   110  bsp_ds18b20.o(i.DQ_Setup_ROM)
+    DQ_Write_Bit                             0x0800377f   Thumb Code    56  bsp_ds18b20.o(i.DQ_Write_Bit)
+    DQ_Write_Byte                            0x080037b7   Thumb Code    56  bsp_ds18b20.o(i.DQ_Write_Byte)
+    DQ_Write_Parameters                      0x080037ef   Thumb Code   118  bsp_ds18b20.o(i.DQ_Write_Parameters)
+    DQ_Write_Parameters_3byte                0x08003865   Thumb Code    68  bsp_ds18b20.o(i.DQ_Write_Parameters_3byte)
+    DQ_Write_Scratchpad                      0x080038a9   Thumb Code    68  bsp_ds18b20.o(i.DQ_Write_Scratchpad)
+    DQ_Write_Scratchpad_Ext                  0x080038ed   Thumb Code    88  bsp_ds18b20.o(i.DQ_Write_Scratchpad_Ext)
+    DQ_Write_Scratchpad_Ext_Match            0x08003945   Thumb Code   114  bsp_ds18b20.o(i.DQ_Write_Scratchpad_Ext_Match)
+    DQ_Write_Scratchpad_Match                0x080039b7   Thumb Code    94  bsp_ds18b20.o(i.DQ_Write_Scratchpad_Match)
+    DQ_Write_User                            0x08003a15   Thumb Code    68  bsp_ds18b20.o(i.DQ_Write_User)
+    DQ_Write_User_Ext                        0x08003a59   Thumb Code    88  bsp_ds18b20.o(i.DQ_Write_User_Ext)
+    DQ_Write_User_Ext_Match                  0x08003ab1   Thumb Code   114  bsp_ds18b20.o(i.DQ_Write_User_Ext_Match)
+    DQ_Write_User_Match                      0x08003b23   Thumb Code    94  bsp_ds18b20.o(i.DQ_Write_User_Match)
+    DUT_DQ_OUT_Get_Temp                      0x08003bb1   Thumb Code   162  bsp_ds18b20.o(i.DUT_DQ_OUT_Get_Temp)
+    DUT_DQ_OUT_Get_Temp_14bit                0x08003c59   Thumb Code   198  bsp_ds18b20.o(i.DUT_DQ_OUT_Get_Temp_14bit)
+    DUT_DQ_OUT_Read_Byte                     0x08003db9   Thumb Code    34  bsp_ds18b20.o(i.DUT_DQ_OUT_Read_Byte)
+    DUT_DQ_OUT_Write_Bit                     0x08003e3d   Thumb Code    74  bsp_ds18b20.o(i.DUT_DQ_OUT_Write_Bit)
+    DUT_DQ_OUT_Write_Byte                    0x08003e8d   Thumb Code    92  bsp_ds18b20.o(i.DUT_DQ_OUT_Write_Byte)
+    DebugMon_Handler                         0x08003eed   Thumb Code     2  stm32f10x_it.o(i.DebugMon_Handler)
+    Delay_us                                 0x08003ef1   Thumb Code    36  bsp_systick.o(i.Delay_us)
+    GPIO_Config                              0x08003f19   Thumb Code   120  bsp_ds18b20.o(i.GPIO_Config)
+    GPIO_Init                                0x08003f91   Thumb Code   278  stm32f10x_gpio.o(i.GPIO_Init)
+    GPIO_ReadInputDataBit                    0x080040a7   Thumb Code    18  stm32f10x_gpio.o(i.GPIO_ReadInputDataBit)
+    GPIO_ResetBits                           0x080040b9   Thumb Code     4  stm32f10x_gpio.o(i.GPIO_ResetBits)
+    GPIO_SetBits                             0x080040bd   Thumb Code     4  stm32f10x_gpio.o(i.GPIO_SetBits)
+    HardFault_Handler                        0x080040c1   Thumb Code    16  stm32f10x_it.o(i.HardFault_Handler)
+    I2C1_Init                                0x080040d5   Thumb Code   118  bsp_iic2.o(i.I2C1_Init)
+    I2C2_Init                                0x08004159   Thumb Code   120  bsp_iic2.o(i.I2C2_Init)
+    I2C_AcknowledgeConfig                    0x080041dd   Thumb Code    24  stm32f10x_i2c.o(i.I2C_AcknowledgeConfig)
+    I2C_Cmd                                  0x080041f5   Thumb Code    24  stm32f10x_i2c.o(i.I2C_Cmd)
+    I2C_DeInit                               0x0800420d   Thumb Code    50  stm32f10x_i2c.o(i.I2C_DeInit)
+    I2C_Init                                 0x08004245   Thumb Code   222  stm32f10x_i2c.o(i.I2C_Init)
+    MUX_18B20_OUT_Write_Bit                  0x08004485   Thumb Code    78  bsp_ds18b20.o(i.MUX_18B20_OUT_Write_Bit)
+    MUX_18B20_OUT_Write_Byte                 0x080044d9   Thumb Code    92  bsp_ds18b20.o(i.MUX_18B20_OUT_Write_Byte)
+    MemManage_Handler                        0x08004719   Thumb Code     4  stm32f10x_it.o(i.MemManage_Handler)
+    NMI_Handler                              0x0800471d   Thumb Code     2  stm32f10x_it.o(i.NMI_Handler)
+    NVIC_Configuration                       0x0800471f   Thumb Code    40  main.o(i.NVIC_Configuration)
+    NVIC_Init                                0x08004749   Thumb Code   100  misc.o(i.NVIC_Init)
+    NVIC_PriorityGroupConfig                 0x080047b9   Thumb Code    10  misc.o(i.NVIC_PriorityGroupConfig)
+    PendSV_Handler                           0x080047cd   Thumb Code     2  stm32f10x_it.o(i.PendSV_Handler)
+    RCC_APB1PeriphClockCmd                   0x080047d1   Thumb Code    26  stm32f10x_rcc.o(i.RCC_APB1PeriphClockCmd)
+    RCC_APB1PeriphResetCmd                   0x080047f1   Thumb Code    26  stm32f10x_rcc.o(i.RCC_APB1PeriphResetCmd)
+    RCC_APB2PeriphClockCmd                   0x08004811   Thumb Code    26  stm32f10x_rcc.o(i.RCC_APB2PeriphClockCmd)
+    RCC_GetClocksFreq                        0x08004831   Thumb Code   192  stm32f10x_rcc.o(i.RCC_GetClocksFreq)
+    SVC_Handler                              0x08004939   Thumb Code     2  stm32f10x_it.o(i.SVC_Handler)
+    SysTick_Handler                          0x08004a25   Thumb Code     8  stm32f10x_it.o(i.SysTick_Handler)
+    SysTick_Init                             0x08004a2d   Thumb Code   106  bsp_systick.o(i.SysTick_Init)
+    SystemInit                               0x08004aa9   Thumb Code    78  system_stm32f10x.o(i.SystemInit)
+    TOTAL_DQ_OUT_Write_Bit                   0x08004fa9   Thumb Code   102  bsp_ds18b20.o(i.TOTAL_DQ_OUT_Write_Bit)
+    TOTAL_DQ_OUT_Write_Byte                  0x08005015   Thumb Code   118  bsp_ds18b20.o(i.TOTAL_DQ_OUT_Write_Byte)
+    TimingDelay_Decrement                    0x08005091   Thumb Code    18  bsp_systick.o(i.TimingDelay_Decrement)
+    USART1_Config                            0x080050a9   Thumb Code   146  bsp_usart1.o(i.USART1_Config)
+    USART1_IRQHandler                        0x08005145   Thumb Code   330  stm32f10x_it.o(i.USART1_IRQHandler)
+    USART_ClearITPendingBit                  0x08005299   Thumb Code    30  stm32f10x_usart.o(i.USART_ClearITPendingBit)
+    USART_Cmd                                0x080052b7   Thumb Code    24  stm32f10x_usart.o(i.USART_Cmd)
+    USART_GetFlagStatus                      0x080052cf   Thumb Code    26  stm32f10x_usart.o(i.USART_GetFlagStatus)
+    USART_GetITStatus                        0x080052e9   Thumb Code    84  stm32f10x_usart.o(i.USART_GetITStatus)
+    USART_ITConfig                           0x0800533d   Thumb Code    74  stm32f10x_usart.o(i.USART_ITConfig)
+    USART_Init                               0x08005389   Thumb Code   210  stm32f10x_usart.o(i.USART_Init)
+    USART_ReceiveData                        0x08005461   Thumb Code    10  stm32f10x_usart.o(i.USART_ReceiveData)
+    USART_SendData                           0x0800546b   Thumb Code     8  stm32f10x_usart.o(i.USART_SendData)
+    UsageFault_Handler                       0x08005473   Thumb Code     4  stm32f10x_it.o(i.UsageFault_Handler)
+    __0printf                                0x08005479   Thumb Code    22  printfa.o(i.__0printf)
+    __1printf                                0x08005479   Thumb Code     0  printfa.o(i.__0printf)
+    __2printf                                0x08005479   Thumb Code     0  printfa.o(i.__0printf)
+    __c89printf                              0x08005479   Thumb Code     0  printfa.o(i.__0printf)
+    printf                                   0x08005479   Thumb Code     0  printfa.o(i.__0printf)
+    __scatterload_copy                       0x08005499   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x080054a7   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x080054a9   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    adc_dr_256                               0x08005d6b   Thumb Code    34  bsp_ds18b20.o(i.adc_dr_256)
+    adc_dr_512                               0x08005d8d   Thumb Code    34  bsp_ds18b20.o(i.adc_dr_512)
+    check_coeff_boundary                     0x08005db1   Thumb Code   306  bsp_ds18b20.o(i.check_coeff_boundary)
+    close_adc_avg                            0x08005fa9   Thumb Code    34  bsp_ds18b20.o(i.close_adc_avg)
+    close_adc_delay                          0x08005fcb   Thumb Code    34  bsp_ds18b20.o(i.close_adc_delay)
+    close_powerdn                            0x08005fed   Thumb Code    34  bsp_ds18b20.o(i.close_powerdn)
+    close_pulldown_powerdn                   0x0800600f   Thumb Code    34  bsp_ds18b20.o(i.close_pulldown_powerdn)
+    fputc                                    0x08006031   Thumb Code    46  bsp_usart1.o(i.fputc)
+    main                                     0x08006065   Thumb Code  1866  main.o(i.main)
+    open_adc_avg                             0x08006955   Thumb Code    34  bsp_ds18b20.o(i.open_adc_avg)
+    open_adc_delay                           0x08006977   Thumb Code    34  bsp_ds18b20.o(i.open_adc_delay)
+    open_powerdn                             0x08006999   Thumb Code    34  bsp_ds18b20.o(i.open_powerdn)
+    open_pulldown_powerdn                    0x080069bb   Thumb Code    34  bsp_ds18b20.o(i.open_pulldown_powerdn)
+    search_device_on_bus                     0x080069dd   Thumb Code    24  bsp_ds18b20.o(i.search_device_on_bus)
+    show_system_parameters                   0x08006a15   Thumb Code   110  bsp_ds18b20.o(i.show_system_parameters)
+    Region$$Table$$Base                      0x08006b88   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x08006ba8   Number         0  anon$$obj.o(Region$$Table)
     SystemCoreClock                          0x20000000   Data           4  system_stm32f10x.o(.data)
     AHBPrescTable                            0x20000004   Data          16  system_stm32f10x.o(.data)
     FUNC                                     0x20000028   Data           4  stm32f10x_it.o(.data)
-    ii                                       0x2000002c   Data           4  stm32f10x_it.o(.data)
-    BOARD_INDEX                              0x20000030   Data           1  stm32f10x_it.o(.data)
-    ROW_INDEX                                0x20000031   Data           1  stm32f10x_it.o(.data)
-    COL_INDEX                                0x20000032   Data           1  stm32f10x_it.o(.data)
-    PACKAGE_LEN                              0x20000034   Data           4  stm32f10x_it.o(.data)
+    BOARD_INDEX                              0x2000002c   Data           1  stm32f10x_it.o(.data)
+    ROW_INDEX                                0x2000002d   Data           1  stm32f10x_it.o(.data)
+    COL_INDEX                                0x2000002e   Data           1  stm32f10x_it.o(.data)
+    PACKAGE_LEN                              0x20000030   Data           4  stm32f10x_it.o(.data)
+    ii                                       0x20000034   Data           4  stm32f10x_it.o(.data)
     __stdout                                 0x2000003c   Data           4  stdout.o(.data)
     ID_Buff                                  0x20000040   Data         640  main.o(.bss)
     PARA_Buff                                0x200002c0   Data         640  main.o(.bss)
@@ -2273,250 +2273,249 @@ Memory Map of the image
 
   Image Entry point : 0x08000131
 
-  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00006bd0, Max: 0x00020000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00006be8, Max: 0x00020000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Base: 0x08000000, Size: 0x00006b90, Max: 0x00020000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00006ba8, Max: 0x00020000, ABSOLUTE)
 
-    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x08000000   0x00000130   Data   RO            3    RESET               startup_stm32f10x_hd.o
-    0x08000130   0x00000000   Code   RO         4203  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
-    0x08000130   0x00000004   Code   RO         4491    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
-    0x08000134   0x00000004   Code   RO         4494    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
-    0x08000138   0x00000000   Code   RO         4496    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
-    0x08000138   0x00000000   Code   RO         4498    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
-    0x08000138   0x00000008   Code   RO         4499    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
-    0x08000140   0x00000000   Code   RO         4501    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
-    0x08000140   0x00000000   Code   RO         4503    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
-    0x08000140   0x00000004   Code   RO         4492    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
-    0x08000144   0x00000024   Code   RO            4    .text               startup_stm32f10x_hd.o
-    0x08000168   0x00000024   Code   RO         4206    .text               mc_w.l(memseta.o)
-    0x0800018c   0x000000b0   Code   RO         4469    .text               mf_w.l(fadd.o)
-    0x0800023c   0x00000080   Code   RO         4471    .text               mf_w.l(fdiv.o)
-    0x080002bc   0x0000014e   Code   RO         4473    .text               mf_w.l(dadd.o)
-    0x0800040a   0x000000e4   Code   RO         4475    .text               mf_w.l(dmul.o)
-    0x080004ee   0x000000de   Code   RO         4477    .text               mf_w.l(ddiv.o)
-    0x080005cc   0x00000022   Code   RO         4479    .text               mf_w.l(dflti.o)
-    0x080005ee   0x0000001a   Code   RO         4481    .text               mf_w.l(dfltui.o)
-    0x08000608   0x00000026   Code   RO         4483    .text               mf_w.l(f2d.o)
-    0x0800062e   0x00000038   Code   RO         4485    .text               mf_w.l(d2f.o)
-    0x08000666   0x00000002   PAD
-    0x08000668   0x00000014   Code   RO         4487    .text               mf_w.l(cfcmple.o)
-    0x0800067c   0x00000014   Code   RO         4489    .text               mf_w.l(cfrcmple.o)
-    0x08000690   0x0000002c   Code   RO         4506    .text               mc_w.l(uidiv.o)
-    0x080006bc   0x00000062   Code   RO         4508    .text               mc_w.l(uldiv.o)
-    0x0800071e   0x0000001e   Code   RO         4510    .text               mc_w.l(llshl.o)
-    0x0800073c   0x00000024   Code   RO         4512    .text               mc_w.l(llsshr.o)
-    0x08000760   0x00000000   Code   RO         4514    .text               mc_w.l(iusefp.o)
-    0x08000760   0x0000006c   Code   RO         4515    .text               mf_w.l(fepilogue.o)
-    0x080007cc   0x000000be   Code   RO         4517    .text               mf_w.l(depilogue.o)
-    0x0800088a   0x00000030   Code   RO         4519    .text               mf_w.l(dfixul.o)
-    0x080008ba   0x00000002   PAD
-    0x080008bc   0x00000028   Code   RO         4521    .text               mf_w.l(cdrcmple.o)
-    0x080008e4   0x00000024   Code   RO         4523    .text               mc_w.l(init.o)
-    0x08000908   0x00000020   Code   RO         4525    .text               mc_w.l(llushr.o)
-    0x08000928   0x00000004   Code   RO         3150    i.BusFault_Handler  stm32f10x_it.o
-    0x0800092c   0x0000002c   Code   RO         3311    i.CRC8_1byte        bsp_ds18b20.o
-    0x08000958   0x00000026   Code   RO         3313    i.Calcrc_byte       bsp_ds18b20.o
-    0x0800097e   0x00000002   PAD
-    0x08000980   0x00000170   Code   RO         3314    i.Check_Alarm_Search  bsp_ds18b20.o
-    0x08000af0   0x00000036   Code   RO         3315    i.Check_All_Basic_CMD  bsp_ds18b20.o
-    0x08000b26   0x00000002   PAD
-    0x08000b28   0x00000218   Code   RO         3316    i.Check_Back_to_Back_Rst  bsp_ds18b20.o
-    0x08000d40   0x00000080   Code   RO         3317    i.Check_ConvertT    bsp_ds18b20.o
-    0x08000dc0   0x00000968   Code   RO         3318    i.Check_MTP         bsp_ds18b20.o
-    0x08001728   0x000002ac   Code   RO         3319    i.Check_Match_ROM   bsp_ds18b20.o
-    0x080019d4   0x000000dc   Code   RO         3320    i.Check_Search_ROM  bsp_ds18b20.o
-    0x08001ab0   0x000000f0   Code   RO         3321    i.Check_Search_follow_function  bsp_ds18b20.o
-    0x08001ba0   0x00000190   Code   RO         3322    i.Check_Temperature_Code  bsp_ds18b20.o
-    0x08001d30   0x000001ac   Code   RO         3323    i.Check_Temperature_Code_14bit  bsp_ds18b20.o
-    0x08001edc   0x000002a4   Code   RO         3324    i.Check_rw_parameters  bsp_ds18b20.o
-    0x08002180   0x00000284   Code   RO         3325    i.Check_rw_rom_code  bsp_ds18b20.o
-    0x08002404   0x000001bc   Code   RO         3326    i.Check_rw_scratchpad  bsp_ds18b20.o
-    0x080025c0   0x00000210   Code   RO         3327    i.Check_rw_scratchpad_ext  bsp_ds18b20.o
-    0x080027d0   0x00000198   Code   RO         3328    i.Check_rw_user     bsp_ds18b20.o
-    0x08002968   0x000001c4   Code   RO         3329    i.Check_rw_user_ext  bsp_ds18b20.o
-    0x08002b2c   0x00000184   Code   RO         3330    i.DQ_Alarm_SearchROM  bsp_ds18b20.o
-    0x08002cb0   0x00000088   Code   RO         3331    i.DQ_Check_Power_Supply  bsp_ds18b20.o
-    0x08002d38   0x00000030   Code   RO         3332    i.DQ_Copy_PAGE0     bsp_ds18b20.o
-    0x08002d68   0x00000030   Code   RO         3333    i.DQ_Copy_PAGE1     bsp_ds18b20.o
-    0x08002d98   0x0000002a   Code   RO         3334    i.DQ_Presence       bsp_ds18b20.o
-    0x08002dc2   0x0000002a   Code   RO         3335    i.DQ_Read2Bit       bsp_ds18b20.o
-    0x08002dec   0x0000002a   Code   RO         3336    i.DQ_Read_Bit       bsp_ds18b20.o
-    0x08002e16   0x0000002a   Code   RO         3337    i.DQ_Read_Byte      bsp_ds18b20.o
-    0x08002e40   0x00000038   Code   RO         3338    i.DQ_Read_Parameters  bsp_ds18b20.o
-    0x08002e78   0x00000074   Code   RO         3341    i.DQ_Read_Rom_Code  bsp_ds18b20.o
-    0x08002eec   0x000000d8   Code   RO         3343    i.DQ_Read_Scrpad    bsp_ds18b20.o
-    0x08002fc4   0x00000038   Code   RO         3344    i.DQ_Read_Scrpad_Ext  bsp_ds18b20.o
-    0x08002ffc   0x00000052   Code   RO         3345    i.DQ_Read_Scrpad_Ext_match2  bsp_ds18b20.o
-    0x0800304e   0x00000052   Code   RO         3346    i.DQ_Read_Scrpad_match2  bsp_ds18b20.o
-    0x080030a0   0x00000038   Code   RO         3347    i.DQ_Read_User_Ext  bsp_ds18b20.o
-    0x080030d8   0x00000052   Code   RO         3348    i.DQ_Read_User_Ext_match2  bsp_ds18b20.o
-    0x0800312a   0x00000002   PAD
-    0x0800312c   0x0000002c   Code   RO         3349    i.DQ_Recall_EE      bsp_ds18b20.o
-    0x08003158   0x0000002c   Code   RO         3350    i.DQ_Recall_PAGE0_RES  bsp_ds18b20.o
-    0x08003184   0x0000002a   Code   RO         3351    i.DQ_Recall_PAGE1   bsp_ds18b20.o
-    0x080031ae   0x0000002e   Code   RO         3352    i.DQ_Rst            bsp_ds18b20.o
-    0x080031dc   0x000001d8   Code   RO         3353    i.DQ_SearchROM      bsp_ds18b20.o
-    0x080033b4   0x000001b4   Code   RO         3354    i.DQ_SearchROM_Read_Scratchpad  bsp_ds18b20.o
-    0x08003568   0x000001a4   Code   RO         3355    i.DQ_SearchROM_Write_Scratchpad  bsp_ds18b20.o
-    0x0800370c   0x0000006e   Code   RO         3356    i.DQ_Setup_ROM      bsp_ds18b20.o
-    0x0800377a   0x00000038   Code   RO         3357    i.DQ_Write_Bit      bsp_ds18b20.o
-    0x080037b2   0x00000038   Code   RO         3358    i.DQ_Write_Byte     bsp_ds18b20.o
-    0x080037ea   0x00000076   Code   RO         3359    i.DQ_Write_Parameters  bsp_ds18b20.o
-    0x08003860   0x00000044   Code   RO         3360    i.DQ_Write_Parameters_3byte  bsp_ds18b20.o
-    0x080038a4   0x00000044   Code   RO         3361    i.DQ_Write_Scratchpad  bsp_ds18b20.o
-    0x080038e8   0x00000058   Code   RO         3362    i.DQ_Write_Scratchpad_Ext  bsp_ds18b20.o
-    0x08003940   0x00000072   Code   RO         3363    i.DQ_Write_Scratchpad_Ext_Match  bsp_ds18b20.o
-    0x080039b2   0x0000005e   Code   RO         3364    i.DQ_Write_Scratchpad_Match  bsp_ds18b20.o
-    0x08003a10   0x00000044   Code   RO         3365    i.DQ_Write_User     bsp_ds18b20.o
-    0x08003a54   0x00000058   Code   RO         3366    i.DQ_Write_User_Ext  bsp_ds18b20.o
-    0x08003aac   0x00000072   Code   RO         3367    i.DQ_Write_User_Ext_Match  bsp_ds18b20.o
-    0x08003b1e   0x0000005e   Code   RO         3368    i.DQ_Write_User_Match  bsp_ds18b20.o
-    0x08003b7c   0x00000030   Code   RO         3369    i.DUT_DQ_OUT_GPIO_Config  bsp_ds18b20.o
-    0x08003bac   0x000000a8   Code   RO         3370    i.DUT_DQ_OUT_Get_Temp  bsp_ds18b20.o
-    0x08003c54   0x000000cc   Code   RO         3371    i.DUT_DQ_OUT_Get_Temp_14bit  bsp_ds18b20.o
-    0x08003d20   0x0000001c   Code   RO         3372    i.DUT_DQ_OUT_Mode_IPU  bsp_ds18b20.o
-    0x08003d3c   0x00000020   Code   RO         3374    i.DUT_DQ_OUT_Mode_Out_PP  bsp_ds18b20.o
-    0x08003d5c   0x00000016   Code   RO         3375    i.DUT_DQ_OUT_Presence  bsp_ds18b20.o
-    0x08003d72   0x00000002   PAD
-    0x08003d74   0x00000040   Code   RO         3376    i.DUT_DQ_OUT_Read_Bit  bsp_ds18b20.o
-    0x08003db4   0x00000022   Code   RO         3377    i.DUT_DQ_OUT_Read_Byte  bsp_ds18b20.o
-    0x08003dd6   0x00000002   PAD
-    0x08003dd8   0x00000060   Code   RO         3378    i.DUT_DQ_OUT_Rst    bsp_ds18b20.o
-    0x08003e38   0x00000050   Code   RO         3379    i.DUT_DQ_OUT_Write_Bit  bsp_ds18b20.o
-    0x08003e88   0x00000060   Code   RO         3380    i.DUT_DQ_OUT_Write_Byte  bsp_ds18b20.o
-    0x08003ee8   0x00000002   Code   RO         3151    i.DebugMon_Handler  stm32f10x_it.o
-    0x08003eea   0x00000002   PAD
-    0x08003eec   0x00000028   Code   RO         3246    i.Delay_us          bsp_systick.o
-    0x08003f14   0x00000078   Code   RO         3381    i.GPIO_Config       bsp_ds18b20.o
-    0x08003f8c   0x00000112   Code   RO         1268    i.GPIO_Init         stm32f10x_gpio.o
-    0x0800409e   0x00000012   Code   RO         1272    i.GPIO_ReadInputDataBit  stm32f10x_gpio.o
-    0x080040b0   0x00000004   Code   RO         1275    i.GPIO_ResetBits    stm32f10x_gpio.o
-    0x080040b4   0x00000004   Code   RO         1276    i.GPIO_SetBits      stm32f10x_gpio.o
-    0x080040b8   0x00000014   Code   RO         3152    i.HardFault_Handler  stm32f10x_it.o
-    0x080040cc   0x00000084   Code   RO         4135    i.I2C1_Init         bsp_iic2.o
-    0x08004150   0x00000084   Code   RO         4139    i.I2C2_Init         bsp_iic2.o
-    0x080041d4   0x00000018   Code   RO         1377    i.I2C_AcknowledgeConfig  stm32f10x_i2c.o
-    0x080041ec   0x00000018   Code   RO         1382    i.I2C_Cmd           stm32f10x_i2c.o
-    0x08004204   0x00000038   Code   RO         1385    i.I2C_DeInit        stm32f10x_i2c.o
-    0x0800423c   0x000000ec   Code   RO         1396    i.I2C_Init          stm32f10x_i2c.o
-    0x08004328   0x00000034   Code   RO         3382    i.MUX_18B20_OUT_GPIO_Config  bsp_ds18b20.o
-    0x0800435c   0x0000001c   Code   RO         3384    i.MUX_18B20_OUT_Mode_IPU  bsp_ds18b20.o
-    0x08004378   0x00000024   Code   RO         3385    i.MUX_18B20_OUT_Mode_Out_PP  bsp_ds18b20.o
-    0x0800439c   0x00000058   Code   RO         3386    i.MUX_18B20_OUT_Presence  bsp_ds18b20.o
-    0x080043f4   0x0000005c   Code   RO         3388    i.MUX_18B20_OUT_Read_Bit  bsp_ds18b20.o
-    0x08004450   0x0000002c   Code   RO         3395    i.MUX_18B20_OUT_Rst  bsp_ds18b20.o
-    0x0800447c   0x00000054   Code   RO         3396    i.MUX_18B20_OUT_Write_Bit  bsp_ds18b20.o
-    0x080044d0   0x00000060   Code   RO         3397    i.MUX_18B20_OUT_Write_Byte  bsp_ds18b20.o
-    0x08004530   0x00000034   Code   RO         3399    i.MUX_E1_GPIO_Config  bsp_ds18b20.o
-    0x08004564   0x00000034   Code   RO         3400    i.MUX_E2_GPIO_Config  bsp_ds18b20.o
-    0x08004598   0x00000030   Code   RO         3401    i.MUX_E3_GPIO_Config  bsp_ds18b20.o
-    0x080045c8   0x00000034   Code   RO         3402    i.MUX_E4_GPIO_Config  bsp_ds18b20.o
-    0x080045fc   0x00000034   Code   RO         3403    i.MUX_E5_GPIO_Config  bsp_ds18b20.o
-    0x08004630   0x00000038   Code   RO         3404    i.MUX_S0_GPIO_Config  bsp_ds18b20.o
-    0x08004668   0x00000038   Code   RO         3405    i.MUX_S1_GPIO_Config  bsp_ds18b20.o
-    0x080046a0   0x00000038   Code   RO         3406    i.MUX_S2_GPIO_Config  bsp_ds18b20.o
-    0x080046d8   0x00000038   Code   RO         3407    i.MUX_S3_GPIO_Config  bsp_ds18b20.o
-    0x08004710   0x00000004   Code   RO         3153    i.MemManage_Handler  stm32f10x_it.o
-    0x08004714   0x00000002   Code   RO         3154    i.NMI_Handler       stm32f10x_it.o
-    0x08004716   0x00000028   Code   RO         3108    i.NVIC_Configuration  main.o
-    0x0800473e   0x00000002   PAD
-    0x08004740   0x00000074   Code   RO           77    i.NVIC_Init         misc.o
-    0x080047b4   0x00000014   Code   RO           78    i.NVIC_PriorityGroupConfig  misc.o
-    0x080047c8   0x00000002   Code   RO         3155    i.PendSV_Handler    stm32f10x_it.o
-    0x080047ca   0x00000002   PAD
-    0x080047cc   0x00000020   Code   RO         1693    i.RCC_APB1PeriphClockCmd  stm32f10x_rcc.o
-    0x080047ec   0x00000020   Code   RO         1694    i.RCC_APB1PeriphResetCmd  stm32f10x_rcc.o
-    0x0800480c   0x00000020   Code   RO         1695    i.RCC_APB2PeriphClockCmd  stm32f10x_rcc.o
-    0x0800482c   0x000000d4   Code   RO         1703    i.RCC_GetClocksFreq  stm32f10x_rcc.o
-    0x08004900   0x00000034   Code   RO         3408    i.STRONG_PULLUP_GPIO_Config  bsp_ds18b20.o
-    0x08004934   0x00000002   Code   RO         3156    i.SVC_Handler       stm32f10x_it.o
-    0x08004936   0x00000008   Code   RO           24    i.SetSysClock       system_stm32f10x.o
-    0x0800493e   0x00000002   PAD
-    0x08004940   0x000000dc   Code   RO           25    i.SetSysClockTo72   system_stm32f10x.o
-    0x08004a1c   0x00000008   Code   RO         3157    i.SysTick_Handler   stm32f10x_it.o
-    0x08004a24   0x0000007c   Code   RO         3247    i.SysTick_Init      bsp_systick.o
-    0x08004aa0   0x00000060   Code   RO           27    i.SystemInit        system_stm32f10x.o
-    0x08004b00   0x00000038   Code   RO         3409    i.TEST_ADDR0_GPIO_Config  bsp_ds18b20.o
-    0x08004b38   0x00000038   Code   RO         3410    i.TEST_ADDR1_GPIO_Config  bsp_ds18b20.o
-    0x08004b70   0x00000038   Code   RO         3411    i.TEST_ADDR2_GPIO_Config  bsp_ds18b20.o
-    0x08004ba8   0x00000038   Code   RO         3412    i.TEST_ADDR3_GPIO_Config  bsp_ds18b20.o
-    0x08004be0   0x00000038   Code   RO         3413    i.TEST_ADDR4_GPIO_Config  bsp_ds18b20.o
-    0x08004c18   0x00000034   Code   RO         3414    i.TEST_ADDR5_GPIO_Config  bsp_ds18b20.o
-    0x08004c4c   0x00000034   Code   RO         3415    i.TEST_ADDR6_GPIO_Config  bsp_ds18b20.o
-    0x08004c80   0x00000034   Code   RO         3416    i.TEST_ADDR7_GPIO_Config  bsp_ds18b20.o
-    0x08004cb4   0x0000002c   Code   RO         3417    i.TEST_DATA0_GPIO_Config  bsp_ds18b20.o
-    0x08004ce0   0x0000002c   Code   RO         3418    i.TEST_DATA1_GPIO_Config  bsp_ds18b20.o
-    0x08004d0c   0x0000002c   Code   RO         3419    i.TEST_DATA2_GPIO_Config  bsp_ds18b20.o
-    0x08004d38   0x00000028   Code   RO         3420    i.TEST_DATA3_GPIO_Config  bsp_ds18b20.o
-    0x08004d60   0x0000002c   Code   RO         3421    i.TEST_DATA4_GPIO_Config  bsp_ds18b20.o
-    0x08004d8c   0x0000002c   Code   RO         3422    i.TEST_DATA5_GPIO_Config  bsp_ds18b20.o
-    0x08004db8   0x0000002c   Code   RO         3423    i.TEST_DATA6_GPIO_Config  bsp_ds18b20.o
-    0x08004de4   0x0000002c   Code   RO         3424    i.TEST_DATA7_GPIO_Config  bsp_ds18b20.o
-    0x08004e10   0x00000034   Code   RO         3425    i.TOTAL_DQ_OUT_GPIO_Config  bsp_ds18b20.o
-    0x08004e44   0x0000001c   Code   RO         3427    i.TOTAL_DQ_OUT_Mode_IPU  bsp_ds18b20.o
-    0x08004e60   0x00000024   Code   RO         3429    i.TOTAL_DQ_OUT_Mode_Out_PP  bsp_ds18b20.o
-    0x08004e84   0x00000070   Code   RO         3430    i.TOTAL_DQ_OUT_Presence  bsp_ds18b20.o
-    0x08004ef4   0x00000054   Code   RO         3432    i.TOTAL_DQ_OUT_Read_Bit  bsp_ds18b20.o
-    0x08004f48   0x00000058   Code   RO         3434    i.TOTAL_DQ_OUT_Rst  bsp_ds18b20.o
-    0x08004fa0   0x0000006c   Code   RO         3435    i.TOTAL_DQ_OUT_Write_Bit  bsp_ds18b20.o
-    0x0800500c   0x0000007c   Code   RO         3436    i.TOTAL_DQ_OUT_Write_Byte  bsp_ds18b20.o
-    0x08005088   0x00000018   Code   RO         3248    i.TimingDelay_Decrement  bsp_systick.o
-    0x080050a0   0x0000009c   Code   RO         3276    i.USART1_Config     bsp_usart1.o
-    0x0800513c   0x00000154   Code   RO         3158    i.USART1_IRQHandler  stm32f10x_it.o
-    0x08005290   0x0000001e   Code   RO         2872    i.USART_ClearITPendingBit  stm32f10x_usart.o
-    0x080052ae   0x00000018   Code   RO         2875    i.USART_Cmd         stm32f10x_usart.o
-    0x080052c6   0x0000001a   Code   RO         2878    i.USART_GetFlagStatus  stm32f10x_usart.o
-    0x080052e0   0x00000054   Code   RO         2879    i.USART_GetITStatus  stm32f10x_usart.o
-    0x08005334   0x0000004a   Code   RO         2881    i.USART_ITConfig    stm32f10x_usart.o
-    0x0800537e   0x00000002   PAD
-    0x08005380   0x000000d8   Code   RO         2882    i.USART_Init        stm32f10x_usart.o
-    0x08005458   0x0000000a   Code   RO         2889    i.USART_ReceiveData  stm32f10x_usart.o
-    0x08005462   0x00000008   Code   RO         2892    i.USART_SendData    stm32f10x_usart.o
-    0x0800546a   0x00000004   Code   RO         3159    i.UsageFault_Handler  stm32f10x_it.o
-    0x0800546e   0x00000002   PAD
-    0x08005470   0x00000020   Code   RO         4441    i.__0printf         mc_w.l(printfa.o)
-    0x08005490   0x0000000e   Code   RO         4529    i.__scatterload_copy  mc_w.l(handlers.o)
-    0x0800549e   0x00000002   Code   RO         4530    i.__scatterload_null  mc_w.l(handlers.o)
-    0x080054a0   0x0000000e   Code   RO         4531    i.__scatterload_zeroinit  mc_w.l(handlers.o)
-    0x080054ae   0x00000002   PAD
-    0x080054b0   0x0000015c   Code   RO         4448    i._fp_digits        mc_w.l(printfa.o)
-    0x0800560c   0x000006f0   Code   RO         4449    i._printf_core      mc_w.l(printfa.o)
-    0x08005cfc   0x00000026   Code   RO         4450    i._printf_post_padding  mc_w.l(printfa.o)
-    0x08005d22   0x00000030   Code   RO         4451    i._printf_pre_padding  mc_w.l(printfa.o)
-    0x08005d52   0x00000022   Code   RO         3437    i.adc_dr_256        bsp_ds18b20.o
-    0x08005d74   0x00000022   Code   RO         3438    i.adc_dr_512        bsp_ds18b20.o
-    0x08005d96   0x00000002   PAD
-    0x08005d98   0x000001f8   Code   RO         3439    i.check_coeff_boundary  bsp_ds18b20.o
-    0x08005f90   0x00000022   Code   RO         3440    i.close_adc_avg     bsp_ds18b20.o
-    0x08005fb2   0x00000022   Code   RO         3441    i.close_adc_delay   bsp_ds18b20.o
-    0x08005fd4   0x00000022   Code   RO         3442    i.close_powerdn     bsp_ds18b20.o
-    0x08005ff6   0x00000022   Code   RO         3443    i.close_pulldown_powerdn  bsp_ds18b20.o
-    0x08006018   0x00000034   Code   RO         3278    i.fputc             bsp_usart1.o
-    0x0800604c   0x000008f0   Code   RO         3109    i.main              main.o
-    0x0800693c   0x00000022   Code   RO         3444    i.open_adc_avg      bsp_ds18b20.o
-    0x0800695e   0x00000022   Code   RO         3445    i.open_adc_delay    bsp_ds18b20.o
-    0x08006980   0x00000022   Code   RO         3446    i.open_powerdn      bsp_ds18b20.o
-    0x080069a2   0x00000022   Code   RO         3447    i.open_pulldown_powerdn  bsp_ds18b20.o
-    0x080069c4   0x00000038   Code   RO         3449    i.search_device_on_bus  bsp_ds18b20.o
-    0x080069fc   0x000000ec   Code   RO         3450    i.show_system_parameters  bsp_ds18b20.o
-    0x08006ae8   0x00000086   Data   RO         3452    .constdata          bsp_ds18b20.o
-    0x08006b6e   0x00000002   PAD
-    0x08006b70   0x00000020   Data   RO         4527    Region$$Table       anon$$obj.o
+    0x08000000   0x08000000   0x00000130   Data   RO            3    RESET               startup_stm32f10x_hd.o
+    0x08000130   0x08000130   0x00000000   Code   RO         4203  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x08000130   0x08000130   0x00000004   Code   RO         4491    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x08000134   0x08000134   0x00000004   Code   RO         4494    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x08000138   0x08000138   0x00000000   Code   RO         4496    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x08000138   0x08000138   0x00000000   Code   RO         4498    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x08000138   0x08000138   0x00000008   Code   RO         4499    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x08000140   0x08000140   0x00000000   Code   RO         4501    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
+    0x08000140   0x08000140   0x00000000   Code   RO         4503    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
+    0x08000140   0x08000140   0x00000004   Code   RO         4492    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x08000144   0x08000144   0x00000024   Code   RO            4    .text               startup_stm32f10x_hd.o
+    0x08000168   0x08000168   0x00000024   Code   RO         4206    .text               mc_w.l(memseta.o)
+    0x0800018c   0x0800018c   0x000000b0   Code   RO         4469    .text               mf_w.l(fadd.o)
+    0x0800023c   0x0800023c   0x0000007c   Code   RO         4471    .text               mf_w.l(fdiv.o)
+    0x080002b8   0x080002b8   0x0000014e   Code   RO         4473    .text               mf_w.l(dadd.o)
+    0x08000406   0x08000406   0x000000e4   Code   RO         4475    .text               mf_w.l(dmul.o)
+    0x080004ea   0x080004ea   0x000000de   Code   RO         4477    .text               mf_w.l(ddiv.o)
+    0x080005c8   0x080005c8   0x00000022   Code   RO         4479    .text               mf_w.l(dflti.o)
+    0x080005ea   0x080005ea   0x0000001a   Code   RO         4481    .text               mf_w.l(dfltui.o)
+    0x08000604   0x08000604   0x00000026   Code   RO         4483    .text               mf_w.l(f2d.o)
+    0x0800062a   0x0800062a   0x00000038   Code   RO         4485    .text               mf_w.l(d2f.o)
+    0x08000662   0x08000662   0x00000002   PAD
+    0x08000664   0x08000664   0x00000014   Code   RO         4487    .text               mf_w.l(cfcmple.o)
+    0x08000678   0x08000678   0x00000014   Code   RO         4489    .text               mf_w.l(cfrcmple.o)
+    0x0800068c   0x0800068c   0x0000002c   Code   RO         4506    .text               mc_w.l(uidiv.o)
+    0x080006b8   0x080006b8   0x00000062   Code   RO         4508    .text               mc_w.l(uldiv.o)
+    0x0800071a   0x0800071a   0x0000001e   Code   RO         4510    .text               mc_w.l(llshl.o)
+    0x08000738   0x08000738   0x00000024   Code   RO         4512    .text               mc_w.l(llsshr.o)
+    0x0800075c   0x0800075c   0x00000000   Code   RO         4514    .text               mc_w.l(iusefp.o)
+    0x0800075c   0x0800075c   0x0000006e   Code   RO         4515    .text               mf_w.l(fepilogue.o)
+    0x080007ca   0x080007ca   0x000000ba   Code   RO         4517    .text               mf_w.l(depilogue.o)
+    0x08000884   0x08000884   0x00000030   Code   RO         4519    .text               mf_w.l(dfixul.o)
+    0x080008b4   0x080008b4   0x00000030   Code   RO         4521    .text               mf_w.l(cdrcmple.o)
+    0x080008e4   0x080008e4   0x00000024   Code   RO         4523    .text               mc_w.l(init.o)
+    0x08000908   0x08000908   0x00000020   Code   RO         4525    .text               mc_w.l(llushr.o)
+    0x08000928   0x08000928   0x00000004   Code   RO         3150    i.BusFault_Handler  stm32f10x_it.o
+    0x0800092c   0x0800092c   0x0000002c   Code   RO         3311    i.CRC8_1byte        bsp_ds18b20.o
+    0x08000958   0x08000958   0x00000026   Code   RO         3313    i.Calcrc_byte       bsp_ds18b20.o
+    0x0800097e   0x0800097e   0x00000002   PAD
+    0x08000980   0x08000980   0x00000170   Code   RO         3314    i.Check_Alarm_Search  bsp_ds18b20.o
+    0x08000af0   0x08000af0   0x00000036   Code   RO         3315    i.Check_All_Basic_CMD  bsp_ds18b20.o
+    0x08000b26   0x08000b26   0x00000002   PAD
+    0x08000b28   0x08000b28   0x00000218   Code   RO         3316    i.Check_Back_to_Back_Rst  bsp_ds18b20.o
+    0x08000d40   0x08000d40   0x00000080   Code   RO         3317    i.Check_ConvertT    bsp_ds18b20.o
+    0x08000dc0   0x08000dc0   0x00000968   Code   RO         3318    i.Check_MTP         bsp_ds18b20.o
+    0x08001728   0x08001728   0x000002ac   Code   RO         3319    i.Check_Match_ROM   bsp_ds18b20.o
+    0x080019d4   0x080019d4   0x000000dc   Code   RO         3320    i.Check_Search_ROM  bsp_ds18b20.o
+    0x08001ab0   0x08001ab0   0x000000f4   Code   RO         3321    i.Check_Search_follow_function  bsp_ds18b20.o
+    0x08001ba4   0x08001ba4   0x00000190   Code   RO         3322    i.Check_Temperature_Code  bsp_ds18b20.o
+    0x08001d34   0x08001d34   0x000001ac   Code   RO         3323    i.Check_Temperature_Code_14bit  bsp_ds18b20.o
+    0x08001ee0   0x08001ee0   0x000002a4   Code   RO         3324    i.Check_rw_parameters  bsp_ds18b20.o
+    0x08002184   0x08002184   0x00000284   Code   RO         3325    i.Check_rw_rom_code  bsp_ds18b20.o
+    0x08002408   0x08002408   0x000001bc   Code   RO         3326    i.Check_rw_scratchpad  bsp_ds18b20.o
+    0x080025c4   0x080025c4   0x00000210   Code   RO         3327    i.Check_rw_scratchpad_ext  bsp_ds18b20.o
+    0x080027d4   0x080027d4   0x00000198   Code   RO         3328    i.Check_rw_user     bsp_ds18b20.o
+    0x0800296c   0x0800296c   0x000001c4   Code   RO         3329    i.Check_rw_user_ext  bsp_ds18b20.o
+    0x08002b30   0x08002b30   0x00000184   Code   RO         3330    i.DQ_Alarm_SearchROM  bsp_ds18b20.o
+    0x08002cb4   0x08002cb4   0x00000088   Code   RO         3331    i.DQ_Check_Power_Supply  bsp_ds18b20.o
+    0x08002d3c   0x08002d3c   0x00000030   Code   RO         3332    i.DQ_Copy_PAGE0     bsp_ds18b20.o
+    0x08002d6c   0x08002d6c   0x00000030   Code   RO         3333    i.DQ_Copy_PAGE1     bsp_ds18b20.o
+    0x08002d9c   0x08002d9c   0x0000002a   Code   RO         3334    i.DQ_Presence       bsp_ds18b20.o
+    0x08002dc6   0x08002dc6   0x0000002a   Code   RO         3335    i.DQ_Read2Bit       bsp_ds18b20.o
+    0x08002df0   0x08002df0   0x0000002a   Code   RO         3336    i.DQ_Read_Bit       bsp_ds18b20.o
+    0x08002e1a   0x08002e1a   0x0000002a   Code   RO         3337    i.DQ_Read_Byte      bsp_ds18b20.o
+    0x08002e44   0x08002e44   0x00000038   Code   RO         3338    i.DQ_Read_Parameters  bsp_ds18b20.o
+    0x08002e7c   0x08002e7c   0x00000074   Code   RO         3341    i.DQ_Read_Rom_Code  bsp_ds18b20.o
+    0x08002ef0   0x08002ef0   0x000000d8   Code   RO         3343    i.DQ_Read_Scrpad    bsp_ds18b20.o
+    0x08002fc8   0x08002fc8   0x00000038   Code   RO         3344    i.DQ_Read_Scrpad_Ext  bsp_ds18b20.o
+    0x08003000   0x08003000   0x00000052   Code   RO         3345    i.DQ_Read_Scrpad_Ext_match2  bsp_ds18b20.o
+    0x08003052   0x08003052   0x00000052   Code   RO         3346    i.DQ_Read_Scrpad_match2  bsp_ds18b20.o
+    0x080030a4   0x080030a4   0x00000038   Code   RO         3347    i.DQ_Read_User_Ext  bsp_ds18b20.o
+    0x080030dc   0x080030dc   0x00000052   Code   RO         3348    i.DQ_Read_User_Ext_match2  bsp_ds18b20.o
+    0x0800312e   0x0800312e   0x00000002   PAD
+    0x08003130   0x08003130   0x0000002c   Code   RO         3349    i.DQ_Recall_EE      bsp_ds18b20.o
+    0x0800315c   0x0800315c   0x0000002c   Code   RO         3350    i.DQ_Recall_PAGE0_RES  bsp_ds18b20.o
+    0x08003188   0x08003188   0x0000002a   Code   RO         3351    i.DQ_Recall_PAGE1   bsp_ds18b20.o
+    0x080031b2   0x080031b2   0x0000002e   Code   RO         3352    i.DQ_Rst            bsp_ds18b20.o
+    0x080031e0   0x080031e0   0x000001d8   Code   RO         3353    i.DQ_SearchROM      bsp_ds18b20.o
+    0x080033b8   0x080033b8   0x000001b4   Code   RO         3354    i.DQ_SearchROM_Read_Scratchpad  bsp_ds18b20.o
+    0x0800356c   0x0800356c   0x000001a4   Code   RO         3355    i.DQ_SearchROM_Write_Scratchpad  bsp_ds18b20.o
+    0x08003710   0x08003710   0x0000006e   Code   RO         3356    i.DQ_Setup_ROM      bsp_ds18b20.o
+    0x0800377e   0x0800377e   0x00000038   Code   RO         3357    i.DQ_Write_Bit      bsp_ds18b20.o
+    0x080037b6   0x080037b6   0x00000038   Code   RO         3358    i.DQ_Write_Byte     bsp_ds18b20.o
+    0x080037ee   0x080037ee   0x00000076   Code   RO         3359    i.DQ_Write_Parameters  bsp_ds18b20.o
+    0x08003864   0x08003864   0x00000044   Code   RO         3360    i.DQ_Write_Parameters_3byte  bsp_ds18b20.o
+    0x080038a8   0x080038a8   0x00000044   Code   RO         3361    i.DQ_Write_Scratchpad  bsp_ds18b20.o
+    0x080038ec   0x080038ec   0x00000058   Code   RO         3362    i.DQ_Write_Scratchpad_Ext  bsp_ds18b20.o
+    0x08003944   0x08003944   0x00000072   Code   RO         3363    i.DQ_Write_Scratchpad_Ext_Match  bsp_ds18b20.o
+    0x080039b6   0x080039b6   0x0000005e   Code   RO         3364    i.DQ_Write_Scratchpad_Match  bsp_ds18b20.o
+    0x08003a14   0x08003a14   0x00000044   Code   RO         3365    i.DQ_Write_User     bsp_ds18b20.o
+    0x08003a58   0x08003a58   0x00000058   Code   RO         3366    i.DQ_Write_User_Ext  bsp_ds18b20.o
+    0x08003ab0   0x08003ab0   0x00000072   Code   RO         3367    i.DQ_Write_User_Ext_Match  bsp_ds18b20.o
+    0x08003b22   0x08003b22   0x0000005e   Code   RO         3368    i.DQ_Write_User_Match  bsp_ds18b20.o
+    0x08003b80   0x08003b80   0x00000030   Code   RO         3369    i.DUT_DQ_OUT_GPIO_Config  bsp_ds18b20.o
+    0x08003bb0   0x08003bb0   0x000000a8   Code   RO         3370    i.DUT_DQ_OUT_Get_Temp  bsp_ds18b20.o
+    0x08003c58   0x08003c58   0x000000cc   Code   RO         3371    i.DUT_DQ_OUT_Get_Temp_14bit  bsp_ds18b20.o
+    0x08003d24   0x08003d24   0x0000001c   Code   RO         3372    i.DUT_DQ_OUT_Mode_IPU  bsp_ds18b20.o
+    0x08003d40   0x08003d40   0x00000020   Code   RO         3374    i.DUT_DQ_OUT_Mode_Out_PP  bsp_ds18b20.o
+    0x08003d60   0x08003d60   0x00000016   Code   RO         3375    i.DUT_DQ_OUT_Presence  bsp_ds18b20.o
+    0x08003d76   0x08003d76   0x00000002   PAD
+    0x08003d78   0x08003d78   0x00000040   Code   RO         3376    i.DUT_DQ_OUT_Read_Bit  bsp_ds18b20.o
+    0x08003db8   0x08003db8   0x00000022   Code   RO         3377    i.DUT_DQ_OUT_Read_Byte  bsp_ds18b20.o
+    0x08003dda   0x08003dda   0x00000002   PAD
+    0x08003ddc   0x08003ddc   0x00000060   Code   RO         3378    i.DUT_DQ_OUT_Rst    bsp_ds18b20.o
+    0x08003e3c   0x08003e3c   0x00000050   Code   RO         3379    i.DUT_DQ_OUT_Write_Bit  bsp_ds18b20.o
+    0x08003e8c   0x08003e8c   0x00000060   Code   RO         3380    i.DUT_DQ_OUT_Write_Byte  bsp_ds18b20.o
+    0x08003eec   0x08003eec   0x00000002   Code   RO         3151    i.DebugMon_Handler  stm32f10x_it.o
+    0x08003eee   0x08003eee   0x00000002   PAD
+    0x08003ef0   0x08003ef0   0x00000028   Code   RO         3246    i.Delay_us          bsp_systick.o
+    0x08003f18   0x08003f18   0x00000078   Code   RO         3381    i.GPIO_Config       bsp_ds18b20.o
+    0x08003f90   0x08003f90   0x00000116   Code   RO         1268    i.GPIO_Init         stm32f10x_gpio.o
+    0x080040a6   0x080040a6   0x00000012   Code   RO         1272    i.GPIO_ReadInputDataBit  stm32f10x_gpio.o
+    0x080040b8   0x080040b8   0x00000004   Code   RO         1275    i.GPIO_ResetBits    stm32f10x_gpio.o
+    0x080040bc   0x080040bc   0x00000004   Code   RO         1276    i.GPIO_SetBits      stm32f10x_gpio.o
+    0x080040c0   0x080040c0   0x00000014   Code   RO         3152    i.HardFault_Handler  stm32f10x_it.o
+    0x080040d4   0x080040d4   0x00000084   Code   RO         4135    i.I2C1_Init         bsp_iic2.o
+    0x08004158   0x08004158   0x00000084   Code   RO         4139    i.I2C2_Init         bsp_iic2.o
+    0x080041dc   0x080041dc   0x00000018   Code   RO         1377    i.I2C_AcknowledgeConfig  stm32f10x_i2c.o
+    0x080041f4   0x080041f4   0x00000018   Code   RO         1382    i.I2C_Cmd           stm32f10x_i2c.o
+    0x0800420c   0x0800420c   0x00000038   Code   RO         1385    i.I2C_DeInit        stm32f10x_i2c.o
+    0x08004244   0x08004244   0x000000ec   Code   RO         1396    i.I2C_Init          stm32f10x_i2c.o
+    0x08004330   0x08004330   0x00000034   Code   RO         3382    i.MUX_18B20_OUT_GPIO_Config  bsp_ds18b20.o
+    0x08004364   0x08004364   0x0000001c   Code   RO         3384    i.MUX_18B20_OUT_Mode_IPU  bsp_ds18b20.o
+    0x08004380   0x08004380   0x00000024   Code   RO         3385    i.MUX_18B20_OUT_Mode_Out_PP  bsp_ds18b20.o
+    0x080043a4   0x080043a4   0x00000058   Code   RO         3386    i.MUX_18B20_OUT_Presence  bsp_ds18b20.o
+    0x080043fc   0x080043fc   0x0000005c   Code   RO         3388    i.MUX_18B20_OUT_Read_Bit  bsp_ds18b20.o
+    0x08004458   0x08004458   0x0000002c   Code   RO         3395    i.MUX_18B20_OUT_Rst  bsp_ds18b20.o
+    0x08004484   0x08004484   0x00000054   Code   RO         3396    i.MUX_18B20_OUT_Write_Bit  bsp_ds18b20.o
+    0x080044d8   0x080044d8   0x00000060   Code   RO         3397    i.MUX_18B20_OUT_Write_Byte  bsp_ds18b20.o
+    0x08004538   0x08004538   0x00000034   Code   RO         3399    i.MUX_E1_GPIO_Config  bsp_ds18b20.o
+    0x0800456c   0x0800456c   0x00000034   Code   RO         3400    i.MUX_E2_GPIO_Config  bsp_ds18b20.o
+    0x080045a0   0x080045a0   0x00000030   Code   RO         3401    i.MUX_E3_GPIO_Config  bsp_ds18b20.o
+    0x080045d0   0x080045d0   0x00000034   Code   RO         3402    i.MUX_E4_GPIO_Config  bsp_ds18b20.o
+    0x08004604   0x08004604   0x00000034   Code   RO         3403    i.MUX_E5_GPIO_Config  bsp_ds18b20.o
+    0x08004638   0x08004638   0x00000038   Code   RO         3404    i.MUX_S0_GPIO_Config  bsp_ds18b20.o
+    0x08004670   0x08004670   0x00000038   Code   RO         3405    i.MUX_S1_GPIO_Config  bsp_ds18b20.o
+    0x080046a8   0x080046a8   0x00000038   Code   RO         3406    i.MUX_S2_GPIO_Config  bsp_ds18b20.o
+    0x080046e0   0x080046e0   0x00000038   Code   RO         3407    i.MUX_S3_GPIO_Config  bsp_ds18b20.o
+    0x08004718   0x08004718   0x00000004   Code   RO         3153    i.MemManage_Handler  stm32f10x_it.o
+    0x0800471c   0x0800471c   0x00000002   Code   RO         3154    i.NMI_Handler       stm32f10x_it.o
+    0x0800471e   0x0800471e   0x00000028   Code   RO         3108    i.NVIC_Configuration  main.o
+    0x08004746   0x08004746   0x00000002   PAD
+    0x08004748   0x08004748   0x00000070   Code   RO           77    i.NVIC_Init         misc.o
+    0x080047b8   0x080047b8   0x00000014   Code   RO           78    i.NVIC_PriorityGroupConfig  misc.o
+    0x080047cc   0x080047cc   0x00000002   Code   RO         3155    i.PendSV_Handler    stm32f10x_it.o
+    0x080047ce   0x080047ce   0x00000002   PAD
+    0x080047d0   0x080047d0   0x00000020   Code   RO         1693    i.RCC_APB1PeriphClockCmd  stm32f10x_rcc.o
+    0x080047f0   0x080047f0   0x00000020   Code   RO         1694    i.RCC_APB1PeriphResetCmd  stm32f10x_rcc.o
+    0x08004810   0x08004810   0x00000020   Code   RO         1695    i.RCC_APB2PeriphClockCmd  stm32f10x_rcc.o
+    0x08004830   0x08004830   0x000000d4   Code   RO         1703    i.RCC_GetClocksFreq  stm32f10x_rcc.o
+    0x08004904   0x08004904   0x00000034   Code   RO         3408    i.STRONG_PULLUP_GPIO_Config  bsp_ds18b20.o
+    0x08004938   0x08004938   0x00000002   Code   RO         3156    i.SVC_Handler       stm32f10x_it.o
+    0x0800493a   0x0800493a   0x00000008   Code   RO           24    i.SetSysClock       system_stm32f10x.o
+    0x08004942   0x08004942   0x00000002   PAD
+    0x08004944   0x08004944   0x000000e0   Code   RO           25    i.SetSysClockTo72   system_stm32f10x.o
+    0x08004a24   0x08004a24   0x00000008   Code   RO         3157    i.SysTick_Handler   stm32f10x_it.o
+    0x08004a2c   0x08004a2c   0x0000007c   Code   RO         3247    i.SysTick_Init      bsp_systick.o
+    0x08004aa8   0x08004aa8   0x00000060   Code   RO           27    i.SystemInit        system_stm32f10x.o
+    0x08004b08   0x08004b08   0x00000038   Code   RO         3409    i.TEST_ADDR0_GPIO_Config  bsp_ds18b20.o
+    0x08004b40   0x08004b40   0x00000038   Code   RO         3410    i.TEST_ADDR1_GPIO_Config  bsp_ds18b20.o
+    0x08004b78   0x08004b78   0x00000038   Code   RO         3411    i.TEST_ADDR2_GPIO_Config  bsp_ds18b20.o
+    0x08004bb0   0x08004bb0   0x00000038   Code   RO         3412    i.TEST_ADDR3_GPIO_Config  bsp_ds18b20.o
+    0x08004be8   0x08004be8   0x00000038   Code   RO         3413    i.TEST_ADDR4_GPIO_Config  bsp_ds18b20.o
+    0x08004c20   0x08004c20   0x00000034   Code   RO         3414    i.TEST_ADDR5_GPIO_Config  bsp_ds18b20.o
+    0x08004c54   0x08004c54   0x00000034   Code   RO         3415    i.TEST_ADDR6_GPIO_Config  bsp_ds18b20.o
+    0x08004c88   0x08004c88   0x00000034   Code   RO         3416    i.TEST_ADDR7_GPIO_Config  bsp_ds18b20.o
+    0x08004cbc   0x08004cbc   0x0000002c   Code   RO         3417    i.TEST_DATA0_GPIO_Config  bsp_ds18b20.o
+    0x08004ce8   0x08004ce8   0x0000002c   Code   RO         3418    i.TEST_DATA1_GPIO_Config  bsp_ds18b20.o
+    0x08004d14   0x08004d14   0x0000002c   Code   RO         3419    i.TEST_DATA2_GPIO_Config  bsp_ds18b20.o
+    0x08004d40   0x08004d40   0x00000028   Code   RO         3420    i.TEST_DATA3_GPIO_Config  bsp_ds18b20.o
+    0x08004d68   0x08004d68   0x0000002c   Code   RO         3421    i.TEST_DATA4_GPIO_Config  bsp_ds18b20.o
+    0x08004d94   0x08004d94   0x0000002c   Code   RO         3422    i.TEST_DATA5_GPIO_Config  bsp_ds18b20.o
+    0x08004dc0   0x08004dc0   0x0000002c   Code   RO         3423    i.TEST_DATA6_GPIO_Config  bsp_ds18b20.o
+    0x08004dec   0x08004dec   0x0000002c   Code   RO         3424    i.TEST_DATA7_GPIO_Config  bsp_ds18b20.o
+    0x08004e18   0x08004e18   0x00000034   Code   RO         3425    i.TOTAL_DQ_OUT_GPIO_Config  bsp_ds18b20.o
+    0x08004e4c   0x08004e4c   0x0000001c   Code   RO         3427    i.TOTAL_DQ_OUT_Mode_IPU  bsp_ds18b20.o
+    0x08004e68   0x08004e68   0x00000024   Code   RO         3429    i.TOTAL_DQ_OUT_Mode_Out_PP  bsp_ds18b20.o
+    0x08004e8c   0x08004e8c   0x00000070   Code   RO         3430    i.TOTAL_DQ_OUT_Presence  bsp_ds18b20.o
+    0x08004efc   0x08004efc   0x00000054   Code   RO         3432    i.TOTAL_DQ_OUT_Read_Bit  bsp_ds18b20.o
+    0x08004f50   0x08004f50   0x00000058   Code   RO         3434    i.TOTAL_DQ_OUT_Rst  bsp_ds18b20.o
+    0x08004fa8   0x08004fa8   0x0000006c   Code   RO         3435    i.TOTAL_DQ_OUT_Write_Bit  bsp_ds18b20.o
+    0x08005014   0x08005014   0x0000007c   Code   RO         3436    i.TOTAL_DQ_OUT_Write_Byte  bsp_ds18b20.o
+    0x08005090   0x08005090   0x00000018   Code   RO         3248    i.TimingDelay_Decrement  bsp_systick.o
+    0x080050a8   0x080050a8   0x0000009c   Code   RO         3276    i.USART1_Config     bsp_usart1.o
+    0x08005144   0x08005144   0x00000154   Code   RO         3158    i.USART1_IRQHandler  stm32f10x_it.o
+    0x08005298   0x08005298   0x0000001e   Code   RO         2872    i.USART_ClearITPendingBit  stm32f10x_usart.o
+    0x080052b6   0x080052b6   0x00000018   Code   RO         2875    i.USART_Cmd         stm32f10x_usart.o
+    0x080052ce   0x080052ce   0x0000001a   Code   RO         2878    i.USART_GetFlagStatus  stm32f10x_usart.o
+    0x080052e8   0x080052e8   0x00000054   Code   RO         2879    i.USART_GetITStatus  stm32f10x_usart.o
+    0x0800533c   0x0800533c   0x0000004a   Code   RO         2881    i.USART_ITConfig    stm32f10x_usart.o
+    0x08005386   0x08005386   0x00000002   PAD
+    0x08005388   0x08005388   0x000000d8   Code   RO         2882    i.USART_Init        stm32f10x_usart.o
+    0x08005460   0x08005460   0x0000000a   Code   RO         2889    i.USART_ReceiveData  stm32f10x_usart.o
+    0x0800546a   0x0800546a   0x00000008   Code   RO         2892    i.USART_SendData    stm32f10x_usart.o
+    0x08005472   0x08005472   0x00000004   Code   RO         3159    i.UsageFault_Handler  stm32f10x_it.o
+    0x08005476   0x08005476   0x00000002   PAD
+    0x08005478   0x08005478   0x00000020   Code   RO         4441    i.__0printf         mc_w.l(printfa.o)
+    0x08005498   0x08005498   0x0000000e   Code   RO         4529    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x080054a6   0x080054a6   0x00000002   Code   RO         4530    i.__scatterload_null  mc_w.l(handlers.o)
+    0x080054a8   0x080054a8   0x0000000e   Code   RO         4531    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x080054b6   0x080054b6   0x00000002   PAD
+    0x080054b8   0x080054b8   0x00000184   Code   RO         4448    i._fp_digits        mc_w.l(printfa.o)
+    0x0800563c   0x0800563c   0x000006dc   Code   RO         4449    i._printf_core      mc_w.l(printfa.o)
+    0x08005d18   0x08005d18   0x00000024   Code   RO         4450    i._printf_post_padding  mc_w.l(printfa.o)
+    0x08005d3c   0x08005d3c   0x0000002e   Code   RO         4451    i._printf_pre_padding  mc_w.l(printfa.o)
+    0x08005d6a   0x08005d6a   0x00000022   Code   RO         3437    i.adc_dr_256        bsp_ds18b20.o
+    0x08005d8c   0x08005d8c   0x00000022   Code   RO         3438    i.adc_dr_512        bsp_ds18b20.o
+    0x08005dae   0x08005dae   0x00000002   PAD
+    0x08005db0   0x08005db0   0x000001f8   Code   RO         3439    i.check_coeff_boundary  bsp_ds18b20.o
+    0x08005fa8   0x08005fa8   0x00000022   Code   RO         3440    i.close_adc_avg     bsp_ds18b20.o
+    0x08005fca   0x08005fca   0x00000022   Code   RO         3441    i.close_adc_delay   bsp_ds18b20.o
+    0x08005fec   0x08005fec   0x00000022   Code   RO         3442    i.close_powerdn     bsp_ds18b20.o
+    0x0800600e   0x0800600e   0x00000022   Code   RO         3443    i.close_pulldown_powerdn  bsp_ds18b20.o
+    0x08006030   0x08006030   0x00000034   Code   RO         3278    i.fputc             bsp_usart1.o
+    0x08006064   0x08006064   0x000008f0   Code   RO         3109    i.main              main.o
+    0x08006954   0x08006954   0x00000022   Code   RO         3444    i.open_adc_avg      bsp_ds18b20.o
+    0x08006976   0x08006976   0x00000022   Code   RO         3445    i.open_adc_delay    bsp_ds18b20.o
+    0x08006998   0x08006998   0x00000022   Code   RO         3446    i.open_powerdn      bsp_ds18b20.o
+    0x080069ba   0x080069ba   0x00000022   Code   RO         3447    i.open_pulldown_powerdn  bsp_ds18b20.o
+    0x080069dc   0x080069dc   0x00000038   Code   RO         3449    i.search_device_on_bus  bsp_ds18b20.o
+    0x08006a14   0x08006a14   0x000000ec   Code   RO         3450    i.show_system_parameters  bsp_ds18b20.o
+    0x08006b00   0x08006b00   0x00000086   Data   RO         3452    .conststring        bsp_ds18b20.o
+    0x08006b86   0x08006b86   0x00000002   PAD
+    0x08006b88   0x08006b88   0x00000020   Data   RO         4527    Region$$Table       anon$$obj.o
 
 
-    Execution Region RW_IRAM1 (Base: 0x20000000, Size: 0x00002170, Max: 0x00005000, ABSOLUTE)
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08006ba8, Size: 0x00002170, Max: 0x00005000, ABSOLUTE)
 
-    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000000   0x00000014   Data   RW           28    .data               system_stm32f10x.o
-    0x20000014   0x00000014   Data   RW         1723    .data               stm32f10x_rcc.o
-    0x20000028   0x00000010   Data   RW         3161    .data               stm32f10x_it.o
-    0x20000038   0x00000004   Data   RW         3249    .data               bsp_systick.o
-    0x2000003c   0x00000004   Data   RW         4505    .data               mc_w.l(stdout.o)
-    0x20000040   0x00001d30   Zero   RW         3110    .bss                main.o
-    0x20001d70   0x00000400   Zero   RW            1    STACK               startup_stm32f10x_hd.o
+    0x20000000   0x08006ba8   0x00000014   Data   RW           28    .data               system_stm32f10x.o
+    0x20000014   0x08006bbc   0x00000014   Data   RW         1723    .data               stm32f10x_rcc.o
+    0x20000028   0x08006bd0   0x00000010   Data   RW         3161    .data               stm32f10x_it.o
+    0x20000038   0x08006be0   0x00000004   Data   RW         3249    .data               bsp_systick.o
+    0x2000003c   0x08006be4   0x00000004   Data   RW         4505    .data               mc_w.l(stdout.o)
+    0x20000040        -       0x00001d30   Zero   RW         3110    .bss                main.o
+    0x20001d70        -       0x00000400   Zero   RW            1    STACK               startup_stm32f10x_hd.o
 
 
 ==============================================================================
@@ -2526,23 +2525,23 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-     17470       4872        134          0          0      70557   bsp_ds18b20.o
-       264         26          0          0          0       1112   bsp_iic2.o
-       188         28          0          4          0      17025   bsp_systick.o
-       208         16          0          0          0       1096   bsp_usart1.o
-         0          0          0          0          0       4216   core_cm3.o
-      2328       1326          0          0       7472       4732   main.o
-       136         24          0          0          0       3079   misc.o
-        36          8        304          0       1024        820   startup_stm32f10x_hd.o
-       300          0          0          0          0       3432   stm32f10x_gpio.o
-       340         20          0          0          0      11782   stm32f10x_i2c.o
-       388         14          0         16          0       5102   stm32f10x_it.o
-       308         38          0         20          0       4755   stm32f10x_rcc.o
-       472          6          0          0          0       6375   stm32f10x_usart.o
-       324         26          0         20          0     228229   system_stm32f10x.o
+     17474       4878        134          0          0      72153   bsp_ds18b20.o
+       264         26          0          0          0       1120   bsp_iic2.o
+       188         28          0          4          0      17049   bsp_systick.o
+       208         16          0          0          0       1124   bsp_usart1.o
+         0          0          0          0          0       4508   core_cm3.o
+      2328       1326          0          0       7472       4788   main.o
+       132         22          0          0          0       3095   misc.o
+        36          8        304          0       1024        828   startup_stm32f10x_hd.o
+       304          0          0          0          0       3476   stm32f10x_gpio.o
+       340         20          0          0          0      11838   stm32f10x_i2c.o
+       388         14          0         16          0       5150   stm32f10x_it.o
+       308         38          0         20          0       4779   stm32f10x_rcc.o
+       472          6          0          0          0       6475   stm32f10x_usart.o
+       328         28          0         20          0     228001   system_stm32f10x.o
 
     ----------------------------------------------------------------------
-     22786       6404        472         60       8496     362312   Object Totals
+     22794       6410        472         60       8496     364384   Object Totals
          0          0         32          0          0          0   (incl. Generated)
         24          0          2          0          0          0   (incl. Padding)
 
@@ -2565,39 +2564,39 @@ Image component sizes
         36          0          0          0          0         68   llsshr.o
         32          0          0          0          0         68   llushr.o
         36          0          0          0          0        108   memseta.o
-      2242         90          0          0          0        444   printfa.o
+      2258         90          0          0          0        452   printfa.o
          0          0          0          4          0          0   stdout.o
         44          0          0          0          0         80   uidiv.o
         98          0          0          0          0         92   uldiv.o
-        40          2          0          0          0         68   cdrcmple.o
+        48          0          0          0          0         68   cdrcmple.o
         20          0          0          0          0         68   cfcmple.o
         20          0          0          0          0         68   cfrcmple.o
         56          0          0          0          0         88   d2f.o
        334          0          0          0          0        148   dadd.o
        222          0          0          0          0        100   ddiv.o
-       190          0          0          0          0        176   depilogue.o
+       186          0          0          0          0        176   depilogue.o
         48          0          0          0          0         68   dfixul.o
         34          0          0          0          0         76   dflti.o
         26          0          0          0          0         76   dfltui.o
        228          0          0          0          0         96   dmul.o
         38          0          0          0          0         68   f2d.o
        176          0          0          0          0        140   fadd.o
-       128          0          0          0          0         88   fdiv.o
-       108          0          0          0          0        168   fepilogue.o
+       124          0          0          0          0         88   fdiv.o
+       110          0          0          0          0        168   fepilogue.o
 
     ----------------------------------------------------------------------
-      4278        108          0          4          0       2492   Library Totals
-         6          0          0          0          0          0   (incl. Padding)
+      4294        106          0          4          0       2500   Library Totals
+         4          0          0          0          0          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
 
-      2604        106          0          4          0        996   mc_w.l
-      1668          2          0          0          0       1496   mf_w.l
+      2620        106          0          4          0       1004   mc_w.l
+      1670          0          0          0          0       1496   mf_w.l
 
     ----------------------------------------------------------------------
-      4278        108          0          4          0       2492   Library Totals
+      4294        106          0          4          0       2500   Library Totals
 
     ----------------------------------------------------------------------
 
@@ -2606,15 +2605,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     27064       6512        472         64       8496     355184   Grand Totals
-     27064       6512        472         64       8496     355184   ELF Image Totals
-     27064       6512        472         64          0          0   ROM Totals
+     27088       6516        472         64       8496     357468   Grand Totals
+     27088       6516        472         64       8496     357468   ELF Image Totals
+     27088       6516        472         64          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                27536 (  26.89kB)
+    Total RO  Size (Code + RO Data)                27560 (  26.91kB)
     Total RW  Size (RW Data + ZI Data)              8560 (   8.36kB)
-    Total ROM Size (Code + RO Data + RW Data)      27600 (  26.95kB)
+    Total ROM Size (Code + RO Data + RW Data)      27624 (  26.98kB)
 
 ==============================================================================
 
