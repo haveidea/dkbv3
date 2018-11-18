@@ -105,6 +105,7 @@ void NVIC_Configuration(void)
   */
 int main(void)
 { 
+	volatile int value;
 
 	SysTick_Init();/* configure SysTick */ 	
 	USART1_Config();
@@ -117,6 +118,47 @@ int main(void)
 		//I2C2_Read_SHT30(temp, 0);
 		//Delay_us(1000000);
 	//}
+//	      IWDG->KR   = 0X5555;   
+//	value = IWDG->SR ;
+//								value = IWDG->SR ;
+////while(IWDG_GetFlagStatus(IWDG_FLAG_PVU) != RESET){}	 
+//	 
+//        IWDG->PR   = 5; 
+//	value = IWDG->SR ;
+//								value = IWDG->SR ;
+//												
+//				value = IWDG->PR ;
+//				value = IWDG->PR ;
+//				value = IWDG->RLR ;
+//				value = IWDG->RLR ;
+
+////while(IWDG_GetFlagStatus(IWDG_FLAG_PVU) == RESET){}	 
+////	while(IWDG_GetFlagStatus(IWDG_FLAG_RVU) != RESET){}  
+
+//        IWDG->RLR  = 100;  
+//				
+//				value = IWDG->PR ;
+//				value = IWDG->PR ;
+//				value = IWDG->RLR ;
+//				value = IWDG->RLR ;				
+//				value = IWDG->SR ;
+//								value = IWDG->SR ;
+//        IWDG->KR   = 0XAAAA;
+//				value = IWDG->SR ;
+//								value = IWDG->SR ;
+//while(IWDG_GetFlagStatus(IWDG_FLAG_RVU) == RESET){}  
+//        IWDG->KR   = 0XCCCC;   
+//				
+//				value = IWDG->PR ;
+//				value = IWDG->PR ;
+//				value = IWDG->RLR ;
+//				value = IWDG->RLR ;
+//								value = IWDG->SR ;
+//								value = IWDG->SR ;
+
+				
+	
+	
 	printf("\r*********Please Enter Command(Hex)*********\r\n");
 					
 	printf("\r\n Test All Commands:   \r%02x\n", 0x01);
@@ -142,7 +184,9 @@ int main(void)
 	printf("\r\n Temperature Read Test(14-bit):    \r%02x\r\n", 0x14);
 	
 	printf("\r**************************************\r\n");
-		
+//		while(1)
+//		{
+//		}
 	for(;;) {
 		switch(FUNC) {
 			case 0x00:
